@@ -5,13 +5,13 @@ banner:
   bg_image: "images/slider-bg-songlaa.jpg"
   bg_overlay: true
   title: "Cloud Native Training <br/> & Solutions"
-  content: "We breath Cloud Native Technology but we don't have our heads in the sky. We love to pass on our knowledge."
+  content: "Cloud Native Technology, secure and easy to understand."
 
 ############################# About #################################
 about:
   enable: true
   title: "About"
-  description: "Contact me on [linked-in](https://www.linkedin.com/in/gabriel-graf-6b6446319) to discuss if you have training needs for Kubernetes, Kubernetes Security & other Cloud Native Technologies."
+  description: "Contact me on [linked-in](https://www.linkedin.com/in/gabriel-graf-6b6446319) to discuss if you have training needs for Kubernetes, Kubernetes Security, Cilium & other Cloud Native Technologies."
   image: "images/wrapper-img.png"
 
 
@@ -55,7 +55,7 @@ about:
 funfacts:
   enable: true
   title: "Fun Facts"
-  description: "I like to keep things very simple & straighforward."
+  description: "I like to keep things simple & straightforward."
   funfact_item:
   # funfacts item loop
   - icon: "fas fa-mug-hot" #https://fontawesome.com/v5.15/icons
