@@ -118,7 +118,7 @@ info = """**LinkedIn**
 [contact.form]
 enable = true
 # FormSubmit.co action URL
-action = "https://formsubmit.co/info@songlaa.com"
+action = "https://formsubmit.co/7fe3785ae223b6189369b2545fde329e"
 # Image on custom success page `/message_sent.html`
 success_image = "images/paper-plane.svg"
 
