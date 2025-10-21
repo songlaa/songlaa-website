@@ -132,5 +132,5 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "get a quote"
-link = "contact"
+link = "#fh5co-contact"
 
