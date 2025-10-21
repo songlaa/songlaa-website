@@ -1,15 +1,29 @@
 ######################## default configuration ####################
-baseURL = "/"
-title = "Songlaa GmbH"
-theme = "airspace-hugo"
+baseURL = "https://songlaa.com/"
+title = "Songlaa Kubernetes Security Trainings"
+theme = "hugo-elate"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+# SEO enhancements
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "Europe/Berlin"
 # post pagination
-paginate = 6 # see https://gohugo.io/extras/pagination/
+paginate = 10 # see https://gohugo.io/extras/pagination/
 # post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
-# google analytics
-googleAnalytics = "UA-123456-78" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+# google analytics - Replace with your actual GA4 measurement ID
+googleAnalytics = "G-5FSCC9JD1D" # GA4 measurement ID for songlaa.com
 # disqus short name
 disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 # disable language

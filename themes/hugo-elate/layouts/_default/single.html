@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        {{ partial "head.html" .}}
+    </head>
+    <body>
+        {{ partial "nav.html" .}}
+
+        <section id="fh5co-home" data-section="home" style="background-image: url(/images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+            <div class="gradient"></div>
+            <div class="container">
+                <div class="text-wrap">
+                    <div class="text-inner">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <h1 class="to-animate">{{ .Title }}</h1>
+                                <h2 class="to-animate">{{ .Description }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slant"></div>
+        </section>
+
+        <section id="fh5co-about" data-section="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-center">
+                        <h2 class="to-animate">{{ .Title }}</h2>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 subtext to-animate">
+                                <h3>{{ .Description }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="fh5co-content to-animate">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center to-animate">
+                        <p style="margin-top: 40px;">
+                            <a href="/contact/" class="btn btn-primary">Contact Us for This Training</a>
+                            <a href="/trainings/" class="btn btn-outline" style="margin-left: 10px;">View All Trainings</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {{ partial "footer.html" .}}
+        {{ partial "js.html" .}}
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<section id="fh5co-kubernetes-security" data-section="kubernetes-security" style="background-color: #52d3aa; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc/MjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+); background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa)); background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%); background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); overflow: hidden; position: relative; color: rgba(255, 255, 255, 0.7); padding: 80px 0;">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12 section-heading text-center">
+                {{ $page := .Site.GetPage "section" "trainings" }}
+                {{ $k8sSecurity := $page.GetPage "kubernetes-security" }}
+                {{ with $k8sSecurity }}
+                <h1 style="color: white; margin-bottom: 30px; visibility: visible; opacity: 1; font-size: 2.5em;">{{ .Title }}</h1>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 subtext">
+                        <p style="color: rgba(255,255,255,0.9); visibility: visible; opacity: 1; font-size: 1.3em; font-weight: 300;">{{ .Description }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="fh5co-content" style="font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); visibility: visible; opacity: 1;">
+                    {{ with .Site.GetPage "trainings/kubernetes-security" }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p style="margin-top: 40px; visibility: visible; opacity: 1;">
+                    <a href="#contact" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">Contact Us for This Training</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

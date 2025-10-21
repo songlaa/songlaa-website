@@ -3,7 +3,8 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
+      - hugo-elate-theme  # Deploy from theme branch as well
   pull_request:
 
 jobs:
@@ -14,27 +15,28 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.124.0'
+          hugo-version: '0.111.3'
           extended: true
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
-      - run: npm ci
-      - run: hugo --minify
+      - name: Build Hugo site
+        run: hugo --gc --minify
 
-      # do not use gh-pages but only the branch created by action
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/hugo-elate-theme'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: songlaa.com

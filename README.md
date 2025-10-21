@@ -1,137 +1,107 @@
-<h1 align=center>Airspace Hugo</h1>
-<p align=center>This theme is suitable for a wide variety of businesses, including marketing, photography, and development enterprises.</p>
+# songlaa.com
 
-<h2 align=center> <a target="_blank" href="https://demo.gethugothemes.com/airspace" rel="nofollow">👀Demo</a> | <a  target="_blank" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethugothemes.com%2Fairspace%2Fsite%2F&form_factor=desktop">Page Speed (95%)🚀</a></h2>
+## 🖥️ Local Development
 
-<p align=center>
-  <a href="https://github.com/gohugoio/hugo/releases/tag/v0.115.1" alt="Contributors">
-    <img src="https://img.shields.io/static/v1?label=min-HUGO-version&message=0.115.1&color=f00&logo=hugo" />
-  </a>
+### Prerequisites
+- Docker (recommended) or Hugo installed locally
 
-  <a href="https://github.com/themefisher/airspace-hugo/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/themefisher/airspace-hugo" alt="license"></a>
-
-  <img src="https://img.shields.io/github/languages/code-size/themefisher/airspace-hugo" alt="code size">
-
-  <a href="https://github.com/themefisher/airspace-hugo/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/themefisher/airspace-hugo" alt="contributors"></a>
-
-  <a href="https://twitter.com/intent/follow?screen_name=gethugothemes">
-    <img src="https://img.shields.io/twitter/follow/gethugothemes?style=social&logo=twitter"
-      alt="follow on Twitter"></a>
-</p>
-
----
-<p align="center">
-  <img src="https://demo.gethugothemes.com/thumbnails/airspace.png" alt="screenshot" width="100%">
-</p>
----
-
-## 🔑Key Features
-
-- 📄 9+ Pre-Designed Pages
-- 🌐 Multiple language support (Fr, En)
-- 📊 Google Analytics support
-- 🎨 CSS and JS bundle with Hugo Pipe
-- 🎨 Bootstrap Based
-- ⚙️ Netlify settings predefine
-- 👥 Multiple authors available
-- ✉️ Contact form support
-- 🔄 GDPR consent support
-- 🗺️ Google Maps support
-- 🎉 Fun factors counter
-- 🚀 Google Page Speed optimized
-- 🌐 Open Graph meta tag
-- 🐦 Twitter Card meta tag
-
-## 📄 9+ Pre-Designed Pages
-
-- 🏠 Home Page
-- 📚 Blog Page
-- 📝 Blog Single Page
-- 📄 Project Page
-- 🛠️ Services
-- 💰 Pricing
-- ❓ FAQ
-- ℹ️ About Page
-- 📞 Contact Page
-
-
-## 🖥️Local development
+### Using Docker (Recommended)
 
 ```bash
-# clone the repository
-git clone git@github.com:themefisher/airspace-hugo.git
+# Clone the repository
+git clone <repository-url>
+cd songlaa.com
 
-# setup project
-$ npm run project-setup
+# Start the development server using Docker
+docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:alpine server --bind 0.0.0.0
 
-# Start local dev server
-$ npm run dev
+# The site will be available at http://localhost:1313/
 ```
 
-Or Check out [Full Documentation](https://docs.gethugothemes.com/airspace/?ref=github).
+## 🔧 Theme Management
 
+### Current Theme
+This site uses the **hugo-elate** theme, which provides:
+- Single-page scrolling design
+- Modern animations and transitions
+- Responsive Bootstrap-based layout
+- Professional business presentation
 
-## ⚙️Deployment and hosting
+### Updating the Theme
 
-[![Deploy to
-Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/themefisher/airspace-hugo)
+If you need to update or modify the hugo-elate theme:
 
-Follow the steps.
+1. **Theme location**: `themes/hugo-elate/`
+2. **Custom partials**: Training sections are in `themes/hugo-elate/layouts/partials/`
+   - `kubernetes-fundamentals.html`
+   - `kubernetes-security.html` 
+   - `cilium.html`
 
-<!-- reporting issue -->
-## 🐞Reporting Issues
+3. **To update theme files**:
+   ```bash
+   # Backup current customizations
+   git checkout -b theme-update-backup
+   
+   # Make your changes to theme files
+   # Test thoroughly with docker/hugo server
+   
+   # Commit changes
+   git add .
+   git commit -m "feat: update theme customizations"
+   ```
 
-We use GitHub Issues as the official bug tracker for the Airspace Template. Please Search [existing
-issues](https://github.com/themefisher/airspace-hugo/issues). Someone may have already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new
-issue](https://github.com/themefisher/airspace-hugo/issues).
+### Configuration Files
 
-## 📱Submit Your Website To Our Showcase
+- **Main config**: `config/_default/hugo.toml`
+- **Parameters**: `config/_default/params.toml` (contains training content and styling)
+- **Menus**: `config/_default/menus.en.toml`
+- **Languages**: `config/_default/languages.toml`
 
-Are you using Airspace Hugo theme? Submit it to our [showcase](https://gethugothemes.com/showcase). 
+### Content Management
 
-Our showcase aims to demonstrate to the world what amazing websites people like you have created utilizing our Hugo themes and to show that Hugo has tremendous capabilities as a Static Site Generator. 
+Training content is managed in `config/_default/params.toml` under these sections:
+- `[kubernetes_fundamentals]`
+- `[kubernetes_security]` 
+- `[cilium]`
 
-View all the websites powered by Airspace Hugo from [here](https://gethugothemes.com/showcase?theme=airspace). 
+To update training information, modify the content in these sections and restart the development server.
 
-[Submit](https://gethugothemes.com/showcase?submit=show) your Airspace Hugo powered website.
+## � Building for Production
 
+```bash
+# Using Docker
+docker run --rm -it -v $(pwd):/src klakegg/hugo:alpine
 
-<!-- licence -->
-## 📄License
+# Using local Hugo
+hugo --minify
+```
 
-Copyright &copy; Designed by [Themefisher](https://themefisher.com) & Developed by
-[Gethugothemes](https://gethugothemes.com)
+The built site will be in the `public/` directory.
 
-**Code License:** Released under the [MIT](https://github.com/themefisher/airspace-hugo/blob/master/LICENSE) license.
+## � Project Structure
 
-**Image license:** The images are only for demonstration purposes. They have their licenses. We don't have permission to
-share those images.
+```
+songlaa.com/
+├── config/_default/          # Hugo configuration files
+├── content/english/          # Content files (mostly unused due to single-page design)
+├── themes/hugo-elate/        # Hugo Elate theme with customizations
+│   ├── layouts/partials/     # Custom training section templates
+│   └── static/              # Theme assets (CSS, JS, images)
+├── static/                   # Site-specific static files
+└── public/                   # Generated site (created during build)
+```
 
-<!-- resources -->
-## 🙏Special Thanks
+## � Acknowledgments
 
-- [Bootstrap](https://getbootstrap.com)
-- [Jquery](https://jquery.com)
-- [Ionicons](https://ionic.io/ionicons)
-- [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
-- [Shuffle](https://vestride.github.io/Shuffle/)
-- [Slick Slider](https://kenwheeler.github.io/slick/)
-- [Google Fonts](https://fonts.google.com/)
-- [All Contributors](https://github.com/themefisher/airspace-hugo/graphs/contributors)
+- [Hugo Elate Theme](https://github.com/saey55/hugo-elate-theme) by saey55
+- [Hugo Static Site Generator](https://gohugo.io/)
+- [Bootstrap Framework](https://getbootstrap.com)
+- Original theme based on [FREEHTML5.co](http://freehtml5.co/) template
 
-## 👨‍💻Hire Us
+## � Contact
 
-Besides developing unique, blazing-fast Hugo themes, we also provide customized services. We specialize in creating affordable, high-quality static websites based on Hugo.
+For training inquiries or website questions, please visit the contact section on the website or reach out through our LinkedIn profile.
 
-If you need to customize the theme or complete website development from scratch, you can hire us. **Check Our
-[Services](https://gethugothemes.com/services/?utm_source=airspace_github&utm_medium=referral&utm_campaign=github_theme_readme)**
+---
 
-<!-- premium themes -->
-## 💎Premium Themes By Us
-
-| [![Mega-Bundle-HUGO](https://demo.gethugothemes.com/thumbnails/bundle.png?)](https://gethugothemes.com/bundle/?utm_source=airspace_github&utm_medium=referral&utm_campaign=github_theme_readme) | [![Bigspring](https://demo.gethugothemes.com/thumbnails/bigspring.png)](https://gethugothemes.com/products/reader/) | [![Navigator](https://demo.gethugothemes.com/thumbnails/navigator.png)](https://gethugothemes.com/products/navigator/) |
-|:---:|:---:|:---:|
-| **Get 55+ Premium Hugo Themes Bundle** | **Bigspring** | **Navigator** |
+**Built with ❤️ for the Kubernetes community**
