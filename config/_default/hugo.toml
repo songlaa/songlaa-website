@@ -15,6 +15,12 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+    ordered = false
+  [markup.highlight]
+    style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
 
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "Europe/Berlin"
@@ -70,17 +76,7 @@ maxAge = "720h"
 
 
 ############################# Markup ###############################
-[markup]
-[markup.goldmark.renderer]
-unsafe= true
-
-[markup.tableOfContents]
-startLevel = 2
-endLevel = 6
-ordered = false
-
-[markup.highlight]
-style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
+# Markup configuration moved to consolidate with earlier [markup] section
 
 
 ############################ Media types ############################
