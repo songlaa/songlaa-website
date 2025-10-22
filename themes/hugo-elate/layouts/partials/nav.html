@@ -39,6 +39,17 @@
                     {{ range .Site.Menus.postpend }}
                         <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
                     {{ end }}
+                    
+                    <!-- Language Switcher -->
+                    {{ if .Site.IsMultiLingual }}
+                    {{ range $lang := .Site.Languages }}
+                        {{ if eq $lang.Lang $.Site.Language.Lang }}
+                            <li class="active"><a href="/{{ $lang.Lang }}/" style="color: #52d3aa !important;"><span>{{ upper $lang.Lang }}</span></a></li>
+                        {{ else }}
+                            <li><a href="/{{ $lang.Lang }}/" class="external"><span>{{ upper $lang.Lang }}</span></a></li>
+                        {{ end }}
+                    {{ end }}
+                    {{ end }}
                 </ul>
             </div>
         </nav>
