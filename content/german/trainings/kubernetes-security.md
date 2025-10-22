@@ -1,67 +1,67 @@
 ---
-title: "Kubernetes Sicherheit Deep Dive"
+title: "Kubernetes Security – Advanced Deep Dive"
 date: 2025-10-20
 draft: false
-description: "Vertiefen Sie sich in Kubernetes-Sicherheitskonzepte und praktische Verteidigungsübungen."
+description: "Vertiefte Kubernetes-Sicherheitskonzepte mit praktischen Defense-Strategien und Real-World-Szenarien."
 ---
 
 ## Überblick
 
-Diese fortgeschrittene Schulung konzentriert sich ausschließlich auf Kubernetes-Sicherheit:
+Diese Expertenschulung fokussiert sich vollständig auf fortgeschrittene Kubernetes-Security:
 
-### Was Sie lernen werden
+### Ihre Expertise-Bereiche
 
-- **Erweiterte RBAC**: Komplexe Berechtigungsstrukturen
-- **Runtime-Sicherheit**: Überwachung und Schutz zur Laufzeit
-- **Compliance**: CIS Benchmarks und Sicherheitsstandards
-- **Threat Detection**: Erkennung und Reaktion auf Bedrohungen
+- **Advanced RBAC**: Komplexe Berechtigungsarchitekturen meistern
+- **Runtime Security**: Proaktive Überwachung und Schutzmaßnahmen
+- **Compliance & Standards**: CIS Benchmarks und regulatorische Anforderungen
+- **Threat Hunting**: Professionelle Bedrohungserkennung und -response
 
-### Kursinhalt
+### Curriculum
 
-#### Tag 1: Sicherheitsgrundlagen vertiefen
-- Kubernetes Threat Modeling
-- Admission Controller konfigurieren
-- Pod Security Standards implementieren
-- OPA Gatekeeper einsetzen
+#### Tag 1: Advanced Security Foundations
+- Professionelles Kubernetes Threat Modeling
+- Admission Controller – Konfiguration und Best Practices
+- Pod Security Standards in Produktionsumgebungen
+- OPA Gatekeeper für Policy-Management
 
-#### Tag 2: Runtime-Sicherheit
-- Falco für Runtime-Überwachung
-- Container Image Scanning
-- Supply Chain Security
-- Vulnerability Management
+#### Tag 2: Runtime Security & Monitoring
+- Falco – Runtime-Überwachung und Alerting
+- Container Image Security und Vulnerability Scanning
+- Supply Chain Security und SBOM-Integration
+- Vulnerability Management und Patching-Strategien
 
 #### Tag 3: Incident Response & Compliance
-- Security Incident Response
-- Forensische Analyse
-- Compliance Frameworks (CIS, NIST)
-- Audit Logging und Monitoring
+- Security Incident Response Playbooks
+- Forensische Analyse in Kubernetes-Umgebungen
+- Compliance Frameworks (CIS, NIST, ISO 27001)
+- Audit Logging und Security Monitoring
 
-### Erweiterte Themen
+### Advanced Topics
 
-#### Zero Trust Networking
-- Service Mesh Sicherheit (Istio/Linkerd)
-- mTLS implementieren
-- Microsegmentierung
-- Traffic-Verschlüsselung
+#### Zero Trust Architecture
+- Service Mesh Security (Istio/Linkerd)
+- Mutual TLS (mTLS) Implementation
+- Mikrosegmentierung und Network Policies
+- End-to-End Traffic-Verschlüsselung
 
-#### Automatisierte Sicherheit
+#### DevSecOps Integration
 - GitOps Security Workflows
-- Sicherheitstests in CI/CD
-- Policy-as-Code
+- Automated Security Testing in CI/CD
+- Policy-as-Code Implementierung
 - Compliance-Automatisierung
 
-### Voraussetzungen
+### Teilnahmevoraussetzungen
 
-- **Erforderlich**: Grundlegende Kubernetes-Kenntnisse
-- **Empfohlen**: Kubernetes Fundamentals Kurs
-- Erfahrung mit Linux und Container
-- Grundverständnis von Netzwerk-Sicherheit
+- **Zwingend erforderlich**: Fundierte Kubernetes-Grundkenntnisse
+- **Stark empfohlen**: Abschluss unseres Kubernetes Fundamentals-Kurses
+- Praxiserfahrung mit Linux und Container-Technologien
+- Solides Verständnis von Netzwerk- und IT-Security-Konzepten
 
-### Schulungsformat
+### Schulungsdetails
 
-- **Dauer**: 3 Tage
-- **Format**: Präsenz oder online
-- **Teilnehmerzahl**: Max. 10 Personen
-- **Sprache**: Deutsch
-- **Level**: Fortgeschritten
-- **Zertifikat**: Teilnahmebescheinigung inklusive
+- **Dauer**: 3 intensive Schulungstage
+- **Durchführung**: Wahlweise Präsenz oder Live-Online
+- **Gruppengröße**: Maximal 10 Teilnehmer für optimale Betreuung
+- **Unterrichtssprache**: Deutsch
+- **Schwierigkeitsgrad**: Expert Level
+- **Zertifizierung**: Qualifiziertes Teilnahmezertifikat

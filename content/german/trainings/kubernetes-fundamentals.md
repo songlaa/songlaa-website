@@ -1,51 +1,51 @@
 ---
-title: "Einführung in Kubernetes - der sichere Weg"
+title: "Kubernetes Grundlagen – Sicherheit von Anfang an"
 date: 2025-10-20
 draft: false
-description: "Lernen Sie die Kernkomponenten und Architektur von Kubernetes mit sicherheitsfokussierten praktischen Übungen."
+description: "Umfassende Kubernetes-Einführung mit integriertem Sicherheitsfokus und praxisorientierten Übungen."
 ---
 
 ## Überblick
 
-Diese Schulung bietet eine umfassende Grundlage für Kubernetes mit starkem Fokus auf Sicherheit:
+Diese Schulung vermittelt solide Kubernetes-Grundlagen mit Security-First-Ansatz:
 
-### Was Sie lernen werden
+### Ihre Lerninhalte
 
-- **Kubernetes-Grundlagen**: Container, Pods, Deployments und Services
-- **Sicherheit von Anfang an**: Best Practices für sichere Cluster-Konfiguration
-- **Praktische Übungen**: Hands-on Labs mit realen Sicherheitsszenarien
-- **Netzwerk-Sicherheit**: Pod-to-Pod-Kommunikation und Network Policies
+- **Kubernetes-Fundamentals**: Container-Orchestrierung, Pods, Deployments und Services
+- **Security by Design**: Sichere Cluster-Konfiguration von Grund auf
+- **Praxis-Workshops**: Realitätsnahe Sicherheitsszenarien und Hands-on-Labs
+- **Netzwerk-Security**: Pod-Kommunikation und Network Policies verstehen
 
-### Kursinhalt
+### Curriculum
 
-#### Tag 1: Kubernetes-Grundlagen
-- Container-Technologie und Docker
-- Kubernetes-Architektur und Komponenten
-- Pods, ReplicaSets und Deployments
-- Services und Ingress
+#### Tag 1: Kubernetes-Fundamentals
+- Container-Technologie und Docker-Grundlagen
+- Kubernetes-Architektur und Core-Komponenten
+- Pods, ReplicaSets und Deployments verstehen
+- Services und Ingress-Controller
 
-#### Tag 2: Sicherheit implementieren
-- Pod Security Standards
-- RBAC (Role-Based Access Control)
-- Secrets und ConfigMaps verwalten
-- Network Policies konfigurieren
+#### Tag 2: Security-Integration
+- Pod Security Standards implementieren
+- RBAC (Role-Based Access Control) konfigurieren
+- Sichere Verwaltung von Secrets und ConfigMaps
+- Network Policies erstellen und testen
 
-#### Tag 3: Praktische Sicherheitsübungen
-- Cluster-Härtung
-- Sicherheits-Scanning
-- Incident Response
-- Monitoring und Logging
+#### Tag 3: Security Deep-Dive & Praxis
+- Cluster-Hardening und Sicherheitsrichtlinien
+- Vulnerability Scanning und Assessment
+- Incident Response Grundlagen
+- Security Monitoring und Logging-Strategien
 
-### Voraussetzungen
+### Teilnahmevoraussetzungen
 
-- Grundkenntnisse in Linux
-- Verständnis von Container-Konzepten
-- Erfahrung mit Kommandozeile
+- Solide Linux-Grundkenntnisse und Kommandozeilenerfahrung
+- Verständnis von Container- und Virtualisierungskonzepten
+- Grundlegende Netzwerk-Kenntnisse von Vorteil
 
-### Schulungsformat
+### Schulungsdetails
 
-- **Dauer**: 3 Tage
-- **Format**: Präsenz oder online
-- **Teilnehmerzahl**: Max. 12 Personen
-- **Sprache**: Deutsch
-- **Materialien**: Inklusive Schulungsunterlagen und Lab-Zugang
+- **Dauer**: 3 praxisintensive Tage
+- **Durchführung**: Wahlweise Präsenz oder Live-Online-Format
+- **Gruppengröße**: Maximal 12 Teilnehmer für individuelle Betreuung
+- **Unterrichtssprache**: Deutsch
+- **Inklusive**: Umfassende Schulungsunterlagen und persönlicher Lab-Zugang

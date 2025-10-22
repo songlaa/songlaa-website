@@ -7,12 +7,12 @@ logo_width = "150px"
 logo_text = "Songlaa"
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
-description = "Expertengeleitet, praxisorientierte Kubernetes- und Cloud Native Security-Schulungen für Profis und Teams"
+description = "Professionelle Kubernetes- und Cloud Native Security-Schulungen von Experten – praxisnah und teamorientiert"
 author = "Songlaa"
 image = "images/logo.png"
 
 # Social media and SEO
-keywords = "kubernetes schulung, kubernetes sicherheit, cloud native sicherheit, docker schulung, container sicherheit, DevSecOps, cybersecurity schulung"
+keywords = "kubernetes schulung, kubernetes sicherheit, cloud native security, docker training, container sicherheit, DevSecOps, cybersecurity training"
 address_descriptors = false
 
 # Navigation (Keep English) - match base params.toml exactly
@@ -23,15 +23,15 @@ contact = "Contact"
 
 # Hero section (German)
 [hero]
-title = "Kubernetes, Kubernetes Sicherheit & Cloud Native Security Schulungen"
-subtitle = "Expertengeleitet, praxisorientierte Schulungen für Profis und Teams."
+title = "Kubernetes & Cloud Native Security Schulungen"
+subtitle = "Praxisnahe Expertenschulungen für professionelle Teams und Einzelpersonen."
 
 # Intro section (German)
 [intro]
 
 [[intro.item]]
 title = "Kubernetes Grundlagen"
-description = "Lernen Sie Kubernetes von Grund auf — mit Sicherheit von der ersten Pod bis zum produktionsreifen Cluster durch ansprechende, praxisorientierte Übungen."
+description = "Von den ersten Schritten bis zum produktionsreifen Cluster – lernen Sie Kubernetes mit Sicherheit im Fokus durch praxisnahe, interaktive Übungen."
 url = "#fh5co-kubernetes-fundamentals"
 button = "Mehr erfahren"
 icon = "icon-settings"
@@ -39,15 +39,15 @@ img = "img_7.jpg"
 
 [[intro.item]]
 title = "Kubernetes Sicherheit"
-description = "Meistern Sie Kubernetes mit praktischem Fokus auf Sicherheit — von Netzwerk-Policies bis zum Laufzeit-Schutz mit starkem Fokus auf praktische Übungen."
+description = "Vertiefen Sie Ihr Kubernetes-Wissen mit Fokus auf Sicherheit – von Netzwerk-Policies bis zum Runtime-Schutz in intensiven Praxis-Workshops."
 url = "#fh5co-kubernetes-security"
 button = "Mehr erfahren"
 icon = "icon-shield"
 img = "img_8.jpg"
 
 [[intro.item]]
-title = "Individuelle Sicherheitsschulung"
-description = "Erhalten Sie ein vollständig maßgeschneidertes Sicherheitsschulungsprogramm für Cloud Native Technologien, designed um Ihre Bedürfnisse — komplett mit immersiven praktischen Übungen."
+title = "Maßgeschneiderte Schulungen"
+description = "Individuelle Cloud Native Security-Programme, perfekt auf Ihre Anforderungen zugeschnitten – mit praxisorientierten Hands-on-Labs."
 url = "#fh5co-contact"
 button = "Mehr erfahren"
 icon = "icon-wrench"
@@ -87,7 +87,7 @@ recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
 [contact]
 enable = true
 title = "Get in Touch"
-description = "Bereit, die Kubernetes- und Cloud Native Security-Fähigkeiten Ihres Teams zu erweitern? Lassen Sie uns über Ihre Schulungsbedürfnisse sprechen."
+description = "Möchten Sie die Kubernetes- und Cloud Native Security-Kompetenzen Ihres Teams stärken? Sprechen wir über Ihre individuellen Schulungsanforderungen."
 info = "Kontaktinformationen"
 button = "Nachricht senden"
 
