@@ -9,7 +9,7 @@ description: "Learn the core components and architecture of Kubernetes with secu
 
 This training provides a comprehensive foundation for Kubernetes with a strong emphasis on security:
 
-- Basic concepts (Grundkonzepte)
+- Basic concepts
 - Kubernetes architecture and components
 - Application deployment
 - Service layer and discovery
