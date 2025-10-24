@@ -1,0 +1,118 @@
+#################### German parameters ################################
+# Favicon
+favicon = "images/favicon.png"
+# Logo
+logo = "images/logo.png"
+logo_width = "150px"
+logo_text = "Songlaa"
+navbar_fixed = false
+# OpenGraph / Twitter Card metadata
+description = "Professionelle Kubernetes- und Cloud Native Security-Schulungen von Experten – praxisnah und teamorientiert"
+author = "Songlaa"
+image = "images/logo.png"
+
+# Social media and SEO
+keywords = "kubernetes schulung, kubernetes sicherheit, cloud native security, docker training, container sicherheit, DevSecOps, cybersecurity training"
+address_descriptors = false
+
+# Navigation (Keep English) - match base params.toml exactly
+[navigation]
+brand = "Songlaa"
+home = "Home"
+contact = "Kontakt"
+
+# Hero section (German)
+[hero]
+title = "Kubernetes & Cloud Native Security Schulungen"
+subtitle = "Praxisnahe Expertenschulungen für professionelle Teams und Einzelpersonen."
+
+# Intro section (German)
+[intro]
+
+[[intro.item]]
+title = "Kubernetes Grundlagen"
+description = "Von den ersten Schritten bis zum produktionsreifen Cluster – lernen Sie Kubernetes mit Sicherheit im Fokus durch praxisnahe, interaktive Übungen."
+url = "#fh5co-kubernetes-fundamentals"
+button = "Mehr erfahren"
+icon = "icon-settings"
+img = "img_7.jpg"
+
+[[intro.item]]
+title = "Kubernetes Sicherheit"
+description = "Vertiefen Sie Ihr Kubernetes-Wissen mit Fokus auf Sicherheit – von Netzwerk-Policies bis zum Runtime-Schutz in intensiven Praxis-Workshops."
+url = "#fh5co-kubernetes-security"
+button = "Mehr erfahren"
+icon = "icon-shield"
+img = "img_8.jpg"
+
+[[intro.item]]
+title = "Massgeschneiderte Schulungen"
+description = "Individuelle Cloud Native Security-Programme, perfekt auf Ihre Anforderungen zugeschnitten – Theorie und praxisorientierten Hands-on-Labs."
+url = "#fh5co-contact"
+button = "Mehr erfahren"
+icon = "icon-wrench"
+img = "img_8.jpg"
+
+# Contact info
+email = "notavailable"
+location = """
+**Songlaa GmbH**  
+Bern, Schweiz
+"""
+copyright = "© 2025 Songlaa GmbH. Alle Rechte vorbehalten."
+custom_script= ""
+google_tag_manager = ""
+
+# Training sections - match English page exactly
+[kubernetes_fundamentals]
+enable = true
+
+[kubernetes_security] 
+enable = true
+
+# Social sites
+[[social]]
+title = "github"
+icon = "fab fa-github"
+link = "https://github.com/songlaa"
+
+[[social]]
+title = "linkedin"
+icon = "fab fa-linkedin"
+link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
+
+recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Contact section (German content, English title)
+[contact]
+enable = true
+title = "Get in Touch"
+description = "Möchten Sie die Kubernetes- und Cloud Native Security-Kompetenzen Ihres Teams stärken? Sprechen wir über Ihre individuellen Schulungsanforderungen."
+info = "Kontaktinformationen"
+button = "Nachricht senden"
+
+[[contact.details]]
+icon = "icon-location-pin"
+info = """**Songlaa GmbH**  
+Bern, Schweiz"""
+
+[[contact.details]]
+icon = "icon-social-linkedin"
+info = """**LinkedIn**  
+[Hier verbinden](https://www.linkedin.com/in/gabriel-graf-6b6446319)"""
+
+[contact.form]
+enable = true
+action = "https://formsubmit.co/7fe3785ae223b6189369b2545fde329e"
+success_image = "images/paper-plane.svg"
+
+# Preloader
+[preloader]
+enable = true
+preloader = ""
+
+# Navigation button (Keep English)
+[navigation_button]
+enable = true
+label = "get a quote"
+link = "#fh5co-contact"
