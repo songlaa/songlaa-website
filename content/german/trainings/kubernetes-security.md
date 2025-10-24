@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Security – Advanced Deep Dive"
+title: "Kubernetes Security"
 date: 2025-10-20
 draft: false
 description: "Kubernetes-Sicherheitskonzepte mit praktischen Defense-Strategien und Real-World-Szenarien."
@@ -7,20 +7,40 @@ description: "Kubernetes-Sicherheitskonzepte mit praktischen Defense-Strategien 
 
 ## Überblick
 
-- Grundkonzepte
-- Kubernetes Architekture und Komponenten
-- Application deployment
-- Service layer und discovery
-- Daten in Kubernetes
-- Ressourcetypen (StatefulSet, DaemonSet, Job, ConfigMap)
-- Ressource management in Kubernetes
-- Troubleshooting
-- Network Policies
-- Security Context
-- Überblick: Cloud Native Computing Landscape
+- Einführung und Grundkonzepte
+    - Container- und Kubernetes-Grundlagen
+- Container-Sicherheit
+    - Image-Grösse, Hardening, Privileges und Security
+    - Docker-Architektur
+- Kubernetes- und Netzwerksicherheit
+    - Secrets und External Operators
+    - Ingress
+    - Network Policies und Encryption
+- Pod-Security-Context
+- Cloud-Native Security und Kubernetes
+    - Secure Image Building und Deployment
+    - SBOM für Container Images
+- Sichere Clusterkonfiguration
+    - Zugriff auf die Kubernetes API kontrollieren
+    - Admission Control
+    - Role-Based Access Control
+    - etcd-Sicherheit (Encryption und High Availability)
+- Runtime Security
 
-### Schulungsdetails
+**Training Format:** Vor Ort (maximal 15 Teilnehmende)
 
-- **Dauer**: 1-2 Schulungstage
-- **Gruppengröße**: Maximal 15 Teilnehmer für optimale Betreuung
-- **Unterrichtssprache**: Deutsch oder Englisch
+## Zielpublikum
+
+DevOps, SRE, security engineers und IT teams.
+
+## Dauer
+
+1 oder 2 Tage
+
+## Voraussetzungen
+
+Teilnehmende benötigen nur einen Laptop mit direktem Zugang zum Internet. Umgang mit der Kommandozeile von Vorteil.
+
+## Ziel
+
+Die Teilnehmenden können nach diesem Kurs Anwendungen in Kubernetes-Clustern sicher und selbstständig bereitstellen und verwalten.

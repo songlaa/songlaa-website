@@ -9,7 +9,8 @@ description: "Learn the core components and architecture of Kubernetes with secu
 
 This training provides a comprehensive foundation for Kubernetes with a strong emphasis on security:
 
-- Basic concepts
+- Basic concepts (Container, Images and Kubernetes)
+- Docker Architecture
 - Kubernetes architecture and components
 - Application deployment
 - Service layer and discovery
@@ -33,9 +34,7 @@ Beginners or professionals who want to understand Kubernetes fundamentals.
 
 ## Requirements
 
-Participants only need:
-- Their laptop
-- Direct internet connection
+Participants only need their laptop and direct internet connection.
 
 ## Outcome
 

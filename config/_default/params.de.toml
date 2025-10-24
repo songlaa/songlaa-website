@@ -19,7 +19,7 @@ address_descriptors = false
 [navigation]
 brand = "Songlaa"
 home = "Home"
-contact = "Contact"
+contact = "Kontakt"
 
 # Hero section (German)
 [hero]
@@ -46,8 +46,8 @@ icon = "icon-shield"
 img = "img_8.jpg"
 
 [[intro.item]]
-title = "Maßgeschneiderte Schulungen"
-description = "Individuelle Cloud Native Security-Programme, perfekt auf Ihre Anforderungen zugeschnitten – mit praxisorientierten Hands-on-Labs."
+title = "Massgeschneiderte Schulungen"
+description = "Individuelle Cloud Native Security-Programme, perfekt auf Ihre Anforderungen zugeschnitten – Theorie und praxisorientierten Hands-on-Labs."
 url = "#fh5co-contact"
 button = "Mehr erfahren"
 icon = "icon-wrench"
