@@ -11,7 +11,7 @@ logo_text = "Songlaa"
 # navbar fixed to top
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
-description = "Expert-led, hands-on Kubernetes and cloud native security trainings designed for professionals and teams"
+description = "Kubernetes & Cloud Native Security On-Site Training – delivered by engineers, hands-on and fully customizable"
 author = "Songlaa"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 
@@ -32,8 +32,8 @@ contact = "Contact"
 
 # Hero section
 [hero]
-title = "Kubernetes, Kubernetes Security & Cloud Native Security Trainings"
-subtitle = "Expert-led, hands-on trainings designed for professionals and teams."
+title = "Kubernetes & Cloud Native Security On-Site Training"
+subtitle = "delivered by engineers, hands-on and fully customizable"
 
 # Intro section - Our training programs
 [intro]
@@ -101,7 +101,7 @@ recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
 [contact]
 enable = true
 title = "Get in Touch"
-description = "Ready to enhance your team's Kubernetes and cloud native security skills? Let's discuss your training needs."
+description = "Ready to enhance your team's Kubernetes and cloud native security skills? Contact us to schedule an on-site training customized for your organization."
 info = "Contact Information"
 button = "Send Message"
 

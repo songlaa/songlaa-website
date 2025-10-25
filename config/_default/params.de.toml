@@ -7,7 +7,7 @@ logo_width = "150px"
 logo_text = "Songlaa"
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
-description = "Professionelle Kubernetes- und Cloud Native Security-Schulungen von Experten – praxisnah und teamorientiert"
+description = "Kubernetes & Cloud Native Security-On-Site Schulungen – von Engineers, praxisorientiert und individuell anpassbar"
 author = "Songlaa"
 image = "images/logo.png"
 
@@ -23,8 +23,8 @@ contact = "Kontakt"
 
 # Hero section (German)
 [hero]
-title = "Kubernetes & Cloud Native Security Schulungen"
-subtitle = "Praxisnahe Expertenschulungen für professionelle Teams und Einzelpersonen."
+title = "Kubernetes & Cloud Native Security On-Site Schulungen"
+subtitle = "von Engineers, praxisorientiert und individuell anpassbar"
 
 # Intro section (German)
 [intro]
@@ -87,7 +87,7 @@ recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
 [contact]
 enable = true
 title = "Get in Touch"
-description = "Möchten Sie die Kubernetes- und Cloud Native Security-Kompetenzen Ihres Teams stärken? Sprechen wir über Ihre individuellen Schulungsanforderungen."
+description = "Möchten Sie die Kubernetes- und Cloud-Native-Security-Kompetenzen Ihres Teams ausbauen? Kontaktieren Sie uns für ein individuell zugeschnittenes On-Site-Training."
 info = "Kontaktinformationen"
 button = "Nachricht senden"
 
