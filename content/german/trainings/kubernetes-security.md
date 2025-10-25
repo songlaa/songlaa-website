@@ -2,7 +2,7 @@
 title: "Kubernetes Security"
 date: 2025-10-20
 draft: false
-description: "Kubernetes-Sicherheitskonzepte mit praktischen Defense-Strategien und Real-World-Szenarien."
+description: "Kubernetes Security Deep Dive mit praxisorientierten hands-on Labs."
 ---
 
 ## Überblick

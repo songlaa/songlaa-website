@@ -25,18 +25,34 @@
 						<div class="form-group">
 							<div class="form-row">
 								<div class="col">
+									{{ if eq .Site.Language.Lang "de" }}
+									<input type="text" name="name" class="form-control" placeholder="Name" required>
+									{{ else }}
 									<input type="text" name="name" class="form-control" placeholder="Full Name" required>
+									{{ end }}
 								</div>
 								<div class="col">
+									{{ if eq .Site.Language.Lang "de" }}
+									<input type="email" name="email" class="form-control" placeholder="E-Mail" required>
+									{{ else }}
 									<input type="email" name="email" class="form-control" placeholder="Email Address" required>
+									{{ end }}
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
+							{{ if eq .Site.Language.Lang "de" }}
+							<input type="text" name="company" class="form-control" placeholder="Unternehmen">
+							{{ else }}
 							<input type="text" name="company" class="form-control" placeholder="Company (Optional)">
+							{{ end }}
 						</div>
 						<div class="form-group">
+							{{ if eq .Site.Language.Lang "de" }}
+							<textarea placeholder="Nachricht" class="form-control" name="message" rows="6" required></textarea>
+							{{ else }}
 							<textarea placeholder="Tell us about your training requirements or questions" class="form-control" name="message" rows="6" required></textarea>
+							{{ end }}
 						</div>
 						<input type="hidden" name="_subject" value="New Training Inquiry from {{ .Site.Title }}">
 						<input type="hidden" name="_captcha" value="false">
