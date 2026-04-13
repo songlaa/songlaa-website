@@ -30,8 +30,8 @@ paginate = 10 # see https://gohugo.io/extras/pagination/
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
 # google analytics - Replace with your actual GA4 measurement ID
 googleAnalytics = "G-5FSCC9JD1D" # GA4 measurement ID for songlaa.com
-# disqus short name
-disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+# disqus - disabled
+# disqusShortname = ""
 # disable language
 disableLanguages = [
 ] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/

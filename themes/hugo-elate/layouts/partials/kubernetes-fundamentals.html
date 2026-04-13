@@ -1,40 +1,72 @@
-<section id="fh5co-kubernetes-fundamentals" data-section="kubernetes-fundamentals" style="background-color: #52d3aa; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc/MjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+); background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa)); background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%); background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); overflow: hidden; position: relative; color: rgba(255, 255, 255, 0.7); padding: 80px 0;">
-                <div class="container">
-        <div class="row">
-            <div class="col-md-12 section-heading text-center">
-                {{ $page := .Site.GetPage "section" "trainings" }}
-                {{ $k8sFundamentals := $page.GetPage "kubernetes-fundamentals" }}
-                {{ with $k8sFundamentals }}
-                <h1 style="color: white; margin-bottom: 30px; visibility: visible; opacity: 1; font-size: 2.5em;">{{ .Title }}</h1>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 subtext">
-                        <p style="color: rgba(255,255,255,0.9); visibility: visible; opacity: 1; font-size: 1.3em; font-weight: 300;">{{ .Description }}</p>
-                    </div>
-                </div>
-                {{ end }}
+<!-- Module 01: Kubernetes Fundamentals Detail -->
+<div class="max-w-7xl mx-auto px-6" id="module-fundamentals">
+    <h2 class="text-3xl font-bold font-headline mb-16 text-center">
+        {{ if eq .Site.Language.Lang "de" }}Im Detail: Kubernetes Fundamentals{{ else }}In-Depth: Kubernetes Fundamentals{{ end }}
+    </h2>
+    <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-4">
+                <span class="text-primary font-bold uppercase tracking-wider text-sm">Module 01</span>
+                <h3 class="text-3xl font-bold font-headline mt-2 mb-6">Core Curriculum</h3>
+                <p class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Operationale Grundlagen und deklaratives State Management.{{ else }}Focusing on the operational foundation and declarative state management.{{ end }}</p>
             </div>
-        </div>
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="fh5co-content" style="font-size: 18px; line-height: 1.8; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); visibility: visible; opacity: 1;">
-                    {{ $page := .Site.GetPage "section" "trainings" }}
-                    {{ $k8sFundamentals := $page.GetPage "kubernetes-fundamentals" }}
-                    {{ with $k8sFundamentals }}
-                        {{ .Content }}
-                    {{ end }}
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">data_object</span> Concepts</h4>
+                    <ul class="space-y-3 text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span>•</span> Control Plane &amp; Worker Nodes</li>
+                        <li class="flex gap-2"><span>•</span> Pods, Deployments, ReplicaSets</li>
+                        <li class="flex gap-2"><span>•</span> Services &amp; Ingress Networking</li>
+                        <li class="flex gap-2"><span>•</span> Namespaces &amp; Resource Scoping</li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p style="margin-top: 40px; visibility: visible; opacity: 1;">
-                    {{ if eq .Site.Language.Lang "de" }}
-                    <a href="#fh5co-contact" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">Kontakt</a>
-                    {{ else }}
-                    <a href="#fh5co-contact" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">Contact Us for This Training</a>
-                    {{ end }}
-                </p>
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">settings_applications</span> Operations</h4>
+                    <ul class="space-y-3 text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span>•</span> Declarative YAML Management</li>
+                        <li class="flex gap-2"><span>•</span> ConfigMaps &amp; Secrets</li>
+                        <li class="flex gap-2"><span>•</span> Storage: PV &amp; StorageClasses</li>
+                        <li class="flex gap-2"><span>•</span> Logs &amp; Metrics Observability</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- Audience & Outcomes -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-primary/5 rounded-2xl p-8 border border-primary/10">
+            <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Zielgruppe{{ else }}Who should attend{{ end }}</h4>
+            <ul class="space-y-4">
+                <li class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-primary">group</span>
+                    <span class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Engineers, die neu bei Kubernetes sind und eine solide Grundlage für den Produktionsbetrieb benötigen.{{ else }}Engineers new to Kubernetes who need a solid foundation for production operations.{{ end }}</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-primary">developer_mode</span>
+                    <span class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Entwickler, die die Infrastruktur verstehen wollen, auf der ihre Anwendungen laufen.{{ else }}Developers wanting to understand the infrastructure their applications run on.{{ end }}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-8">
+            <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Ergebnisse{{ else }}Key Outcomes{{ end }}</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}kubectl Meisterschaft{{ else }}Master kubectl mastery{{ end }}</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Komplexe Workloads deployen{{ else }}Deploy complex workloads{{ end }}</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Cluster-Status verwalten{{ else }}Manage cluster state{{ end }}</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Grundlegendes Troubleshooting{{ else }}Basic troubleshooting{{ end }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

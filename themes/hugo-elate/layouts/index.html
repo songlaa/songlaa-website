@@ -1,58 +1,54 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html class="scroll-smooth" lang="{{ .Site.LanguageCode }}">
     <head>
         {{ partial "head.html" .}}
     </head>
-    <body>
+    <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
         {{ partial "nav.html" .}}
 
-		{{ partial "hero.html" .}}
-		
-        {{ partial "intro.html" .}}
+        <main class="pt-20">
+            {{ partial "hero.html" .}}
 
-		{{ if .Site.Params.kubernetes_fundamentals.enable }}
-       		{{ partial "kubernetes-fundamentals.html" .}}
-       	{{ end }}
+            {{ partial "intro.html" .}}
 
-		{{ if .Site.Params.kubernetes_security.enable }}
-       		{{ partial "kubernetes-security.html" .}}
-       	{{ end }}
+            <!-- Detailed Module Breakdowns -->
+            <section class="py-32 bg-white space-y-32">
+                {{ if .Site.Params.kubernetes_fundamentals.enable }}
+                    {{ partial "kubernetes-fundamentals.html" .}}
+                {{ end }}
 
-		{{ if .Site.Params.cilium.enable }}
-       		{{ partial "cilium.html" .}}
-       	{{ end }}
+                {{ if .Site.Params.kubernetes_security.enable }}
+                    {{ partial "kubernetes-security.html" .}}
+                {{ end }}
 
-		{{ if .Site.Params.work.enable }}
-       		{{ partial "work.html" .}}
-       	{{ end }}
+                {{ partial "cilium.html" .}}
+            </section>
 
-		{{ if .Site.Params.testimonials.enable }}
-        	{{ partial "testimonials.html" .}}
-		{{ end }}
+            {{ partial "engineering-approach.html" .}}
 
-		{{ if .Site.Params.services.enable }}
-        	{{ partial "services.html" .}}
-		{{ end }}
+            {{ partial "secure-stack.html" .}}
 
-		{{ if .Site.Params.about.enable }}
-        	{{ partial "about.html" .}}
-		{{ end }}
+            {{ if .Site.Params.contact.enable }}
+                {{ partial "contact.html" .}}
+            {{ end }}
+        </main>
 
-		{{ if .Site.Params.counters.enable }}
-        	{{ partial "counters.html" .}}
-        {{ end }}
-
-		{{ if .Site.Params.contact.enable }}
-        	{{ partial "contact.html" .}}
-        {{ end }}
-
-        {{ if .Site.Params.footer.enable }}
-        	{{ partial "footer.html" .}}
-        {{ end }}
+        <footer class="w-full rounded-t-[3rem] mt-20 bg-zinc-100">
+            <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-6">
+                <div class="font-headline font-bold text-lg text-zinc-900">
+                    {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
+                </div>
+                <div class="flex gap-8">
+                    <a class="text-zinc-500 hover:text-blue-500 transition-colors font-body text-sm leading-relaxed no-underline" href="#contact">{{ if eq .Site.Language.Lang "de" }}Kontakt{{ else }}Contact{{ end }}</a>
+                    {{ range .Site.Params.social }}
+                    <a class="text-zinc-500 hover:text-blue-500 transition-colors font-body text-sm leading-relaxed no-underline" href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+                    {{ end }}
+                </div>
+                <div class="text-zinc-500 font-body text-sm leading-relaxed">
+                    {{ with .Site.Params.copyright }}{{ . | markdownify }}{{ end }}
+                </div>
+            </div>
+        </footer>
 
         {{ partial "js.html" .}}
     </body>

@@ -1,0 +1,35 @@
+<!-- Engineering-First Approach Section -->
+<section class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" alt="Engineers discussing Kubernetes architecture on a large digital screen" src="{{ "images/engineering-approach.jpg" | absURL }}">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+            </div>
+            <div>
+                <h2 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface mb-8">
+                    {{ if eq .Site.Language.Lang "de" }}Engineering-First Ansatz{{ else }}Engineering-First Approach{{ end }}
+                </h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    {{ if eq .Site.Language.Lang "de" }}Wir lehren nicht nur das "Wie", sondern auch das "Warum". Unser Training überbrückt die Lücke zwischen Sicherheitstheorie und Engineering-Alltag.{{ else }}We don't just teach the "how", we teach the "why". Our training is designed to bridge the gap between high-level security theory and day-to-day engineering reality.{{ end }}
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                        <span class="text-on-surface font-medium">{{ if eq .Site.Language.Lang "de" }}Von Praktikern geleitete Workshops{{ else }}Practitioner-led workshops{{ end }}</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                        <span class="text-on-surface font-medium">{{ if eq .Site.Language.Lang "de" }}Szenarien aus der realen Welt{{ else }}Real-world exploit scenarios{{ end }}</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                        <span class="text-on-surface font-medium">{{ if eq .Site.Language.Lang "de" }}Infrastructure as Code (IaC) Fokus{{ else }}Infrastructure as Code (IaC) focus{{ end }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

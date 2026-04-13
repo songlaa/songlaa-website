@@ -1,28 +1,67 @@
-	<section id="fh5co-intro">
-		<div class="container">
-			<div class="row row-bottom-padded-lg">
-				{{ range .Site.Params.intro.item }}
-				<div class="fh5co-block to-animate" style="background-image: url(images/{{ .img }});">
-					<div class="overlay-darker"></div>
-					<div class="overlay"></div>
-					<div class="fh5co-text">
-						<i class="fh5co-intro-icon {{ .icon }}"></i>
-						<h2>{{ .title }}</h2>
-						<p>{{ .description }}</p>
-						{{ if .button}}
-						<p><a href="{{ .url }}" class="btn btn-primary">{{ .button}}</a></p>
-						{{ end }}
-					</div>
-				</div>
-				{{ end }}
-			</div>
-			{{ if .Site.Params.intro.video.enable }}
-			<div class="row watch-video text-center to-animate">
-				<!-- <span>{{ with .Site.Params.intro.video }}{{ . }}{{ end }}</span> -->
-				<span>{{.Site.Params.intro.video.title | markdownify }}</span>
+<!-- Training Approach Section -->
+<section class="py-24 bg-white border-b border-surface-container">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {{ range .Site.Params.intro.item }}
+            <div class="flex flex-col gap-4">
+                <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined">{{ .icon }}</span>
+                </div>
+                <h3 class="text-xl font-bold font-headline">{{ .title }}</h3>
+                <p class="text-on-surface-variant">{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
-				<a href="{{ .Site.Params.intro.video.url }}" class="popup-vimeo btn-video"><i class="{{ .Site.Params.intro.video.icon | markdownify }}"></i></a>
-			</div>
-			{{ end }}
-		</div>
-	</section>
+<!-- Training Modules Grid -->
+<section class="py-32 bg-surface-container-low" id="modules">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold font-headline tracking-tight text-on-surface mb-6">
+                    {{ if eq $.Site.Language.Lang "de" }}Unsere Module{{ else }}Expert-Led Modules{{ end }}
+                </h2>
+                <p class="text-lg text-on-surface-variant font-body">
+                    {{ if eq $.Site.Language.Lang "de" }}Unser Curriculum für moderne Engineering-Teams.{{ else }}Deep dive into our curriculum designed for modern engineering teams.{{ end }}
+                </p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Module 1: Kubernetes Fundamentals -->
+            <a class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col h-full border border-outline-variant/30 group no-underline" href="#module-fundamentals">
+                <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">hub</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Kubernetes Fundamentals</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">{{ with index .Site.Params.intro.item 0 }}{{ .description }}{{ end }}</p>
+                <div class="pt-6 border-t border-outline-variant/10">
+                    <span class="text-primary font-bold">{{ if eq $.Site.Language.Lang "de" }}2 Tage Workshop{{ else }}2 Days Workshop{{ end }}</span>
+                </div>
+            </a>
+            <!-- Module 2: Kubernetes Security -->
+            <a class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col h-full border-2 border-primary/20 group no-underline" href="#module-security">
+                <div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">shield</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Kubernetes Security</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">{{ with index .Site.Params.intro.item 1 }}{{ .description }}{{ end }}</p>
+                <div class="pt-6 border-t border-outline-variant/10">
+                    <span class="text-secondary font-bold">{{ if eq $.Site.Language.Lang "de" }}3 Tage Deep Dive{{ else }}3 Days Deep Dive{{ end }}</span>
+                </div>
+            </a>
+            <!-- Module 3: Custom Security Training -->
+            <a class="bg-surface-container-lowest p-10 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col h-full border border-outline-variant/30 group no-underline" href="#module-custom">
+                <div class="w-14 h-14 bg-tertiary-container/20 text-tertiary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">bolt</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline mb-4 text-on-surface">Custom Security Training</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">{{ with index .Site.Params.intro.item 2 }}{{ .description }}{{ end }}</p>
+                <div class="pt-6 border-t border-outline-variant/10">
+                    <span class="text-tertiary font-bold">{{ if eq $.Site.Language.Lang "de" }}Individuelle Agenda{{ else }}Tailored Agenda{{ end }}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

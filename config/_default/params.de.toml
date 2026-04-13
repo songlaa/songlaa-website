@@ -30,36 +30,27 @@ subtitle = "von Engineers, praxisorientiert und individuell anpassbar"
 [intro]
 
 [[intro.item]]
-title = "Kubernetes Grundlagen"
-description = "Von den ersten Schritten bis zum produktionsreifen Cluster – lernen Sie Kubernetes mit Sicherheit im Fokus durch praxisnahe, interaktive Übungen."
-url = "#fh5co-kubernetes-fundamentals"
-button = "Mehr erfahren"
-icon = "icon-settings"
-img = "img_7.jpg"
+title = "Von Engineers geleitet"
+description = "Unsere Trainer sind praktizierende Security Engineers, die täglich grosse Kubernetes-Cluster aufbauen und absichern."
+icon = "engineering"
 
 [[intro.item]]
-title = "Kubernetes Sicherheit"
-description = "Vertiefen Sie Ihr Kubernetes-Wissen mit Fokus auf Sicherheit – von Netzwerk-Policies bis zum Runtime-Schutz in intensiven Praxis-Workshops."
-url = "#fh5co-kubernetes-security"
-button = "Mehr erfahren"
-icon = "icon-shield"
-img = "img_8.jpg"
+title = "100% Praxisorientiert"
+description = "Keine endlosen Folien. Unser Training basiert auf realen Szenarien, Live-Hacking-Sessions und intensiven Laborübungen."
+icon = "front_hand"
 
 [[intro.item]]
-title = "Massgeschneiderte Schulungen"
-description = "Individuelle Cloud Native Security-Programme, perfekt auf Ihre Anforderungen zugeschnitten – Theorie und praxisorientierten Hands-on-Labs."
-url = "#fh5co-contact"
-button = "Mehr erfahren"
-icon = "icon-wrench"
-img = "img_8.jpg"
+title = "Individuell anpassbar"
+description = "Jedes Team ist anders. Wir passen unser Curriculum an Ihren Tech-Stack, Cloud-Anbieter und interne Sicherheitsrichtlinien an."
+icon = "tune"
 
 # Contact info
-email = "notavailable"
+email = "training@songlaa.com"
 location = """
 **Songlaa GmbH**  
 Bern, Schweiz
 """
-copyright = "© 2025 Songlaa GmbH. Alle Rechte vorbehalten."
+copyright = "© 2026 Songlaa GmbH. Alle Rechte vorbehalten."
 custom_script= ""
 google_tag_manager = ""
 
@@ -81,38 +72,10 @@ title = "linkedin"
 icon = "fab fa-linkedin"
 link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
 
-recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
-
-# Contact section (German content, English title)
 [contact]
 enable = true
-title = "Get in Touch"
-description = "Möchten Sie die Kubernetes- und Cloud-Native-Security-Kompetenzen Ihres Teams ausbauen? Kontaktieren Sie uns für ein individuell zugeschnittenes On-Site-Training."
-info = "Kontaktinformationen"
-button = "Nachricht senden"
-
-[[contact.details]]
-icon = "icon-location-pin"
-info = """**Songlaa GmbH**  
-Bern, Schweiz"""
-
-[[contact.details]]
-icon = "icon-social-linkedin"
-info = """**LinkedIn**  
-[Hier verbinden](https://www.linkedin.com/in/gabriel-graf-6b6446319)"""
 
 [contact.form]
 enable = true
 action = "https://formsubmit.co/7fe3785ae223b6189369b2545fde329e"
-success_image = "images/paper-plane.svg"
 
-# Preloader
-[preloader]
-enable = true
-preloader = ""
-
-# Navigation button (Keep English)
-[navigation_button]
-enable = true
-label = "get a quote"
-link = "#fh5co-contact"

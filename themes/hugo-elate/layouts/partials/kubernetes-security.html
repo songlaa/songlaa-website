@@ -1,38 +1,74 @@
-<section id="fh5co-kubernetes-security" data-section="kubernetes-security" style="background-color: #52d3aa; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc/MjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+); background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa)); background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); background-image: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%); background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%); overflow: hidden; position: relative; color: rgba(255, 255, 255, 0.7); padding: 80px 0;">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12 section-heading text-center">
-                {{ $page := .Site.GetPage "section" "trainings" }}
-                {{ $k8sSecurity := $page.GetPage "kubernetes-security" }}
-                {{ with $k8sSecurity }}
-                <h1 style="color: white; margin-bottom: 30px; visibility: visible; opacity: 1; font-size: 2.5em;">{{ .Title }}</h1>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 subtext">
-                        <p style="color: rgba(255,255,255,0.9); visibility: visible; opacity: 1; font-size: 1.3em; font-weight: 300;">{{ .Description }}</p>
-                    </div>
+<!-- Module 02: Kubernetes Security Detail -->
+<div class="max-w-7xl mx-auto px-6" id="module-security">
+    <h2 class="text-3xl font-bold font-headline mb-16 text-center">
+        {{ if eq .Site.Language.Lang "de" }}Im Detail: Kubernetes Security{{ else }}In-Depth: Kubernetes Security{{ end }}
+    </h2>
+    <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-4">
+                <span class="text-secondary font-bold uppercase tracking-wider text-sm">Module 02</span>
+                <h3 class="text-3xl font-bold font-headline mt-2 mb-6">Security Deep Dive</h3>
+                <p class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Umfassende Sicherheitshärtung vom Container bis zum Cluster-Level.{{ else }}Comprehensive security hardening from the container to the cluster level.{{ end }}</p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">policy</span> Policy &amp; Access</h4>
+                    <ul class="space-y-3 text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span>•</span> RBAC &amp; Least Privilege</li>
+                        <li class="flex gap-2"><span>•</span> Network Policies (L3/L4/L7)</li>
+                        <li class="flex gap-2"><span>•</span> Pod Security Admission (PSA)</li>
+                        <li class="flex gap-2"><span>•</span> API Server Hardening</li>
+                    </ul>
                 </div>
-                {{ end }}
-            </div>
-        </div>
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="fh5co-content" style="font-size: 18px; line-height: 1.8; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); visibility: visible; opacity: 1;">
-                    {{ with .Site.GetPage "trainings/kubernetes-security" }}
-                        {{ .Content }}
-                    {{ end }}
+                <div>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">visibility</span> Defense in Depth</h4>
+                    <ul class="space-y-3 text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span>•</span> Runtime Security (Falco)</li>
+                        <li class="flex gap-2"><span>•</span> Secret Encryption at Rest</li>
+                        <li class="flex gap-2"><span>•</span> Image Scanning &amp; SBOMs</li>
+                        <li class="flex gap-2"><span>•</span> Supply Chain (SLSA/Sigstore)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p style="margin-top: 40px; visibility: visible; opacity: 1;">
-                    {{ if eq .Site.Language.Lang "de" }}
-                    <a href="#fh5co-contact" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">Kontakt</a>
-                    {{ else }}
-                    <a href="#fh5co-contact" class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;">Contact Us for This Training</a>
-                    {{ end }}
-                </p>
+    </div>
+    <!-- Audience & Outcomes -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-secondary-container/10 rounded-2xl p-8 border border-secondary/10">
+            <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Zielgruppe{{ else }}Who should attend{{ end }}</h4>
+            <ul class="space-y-4">
+                <li class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-secondary">security</span>
+                    <span class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Sicherheitsexperten, die für die Prüfung und Absicherung von Cloud-Native-Stacks verantwortlich sind.{{ else }}Security professionals responsible for auditing and securing cloud-native stacks.{{ end }}</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-secondary">settings</span>
+                    <span class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}DevOps & Platform Engineers, die Produktionsumgebungen härten.{{ else }}DevOps &amp; Platform Engineers hardening production environments.{{ end }}</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-surface-container rounded-2xl p-8">
+            <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Ergebnisse{{ else }}Key Outcomes{{ end }}</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    <span>Zero-Trust Architecture</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Automatisierte Bedrohungserkennung{{ else }}Automated Threat Detection{{ end }}</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Gehärtete CI/CD-Pipelines{{ else }}Hardened CI/CD Pipelines{{ end }}</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm">
+                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                    <span>{{ if eq .Site.Language.Lang "de" }}Runtime Forensik{{ else }}Runtime Forensics Mastery{{ end }}</span>
+                </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 </section>

@@ -1,0 +1,38 @@
+<!-- The Secure Kubernetes Stack Section -->
+<section class="py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="order-2 lg:order-1">
+                <h2 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface mb-8">
+                    {{ if eq .Site.Language.Lang "de" }}Der sichere Kubernetes Stack{{ else }}The Secure Kubernetes Stack{{ end }}
+                </h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    {{ if eq .Site.Language.Lang "de" }}Moderne Sicherheit ist mehrschichtig. Wir decken den gesamten Lebenszyklus ab, vom Erstellen sicherer Images bis zur Überwachung des Laufzeitverhaltens in Produktionsclustern.{{ else }}Modern security is multi-layered. We cover the entire lifecycle, from building secure images to monitoring runtime behavior in high-traffic production clusters.{{ end }}
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-surface-container p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Build-Sicherheit{{ else }}Build Security{{ end }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Härtung von Containern und CI/CD-Pipelines.{{ else }}Hardening containers and CI/CD pipelines.{{ end }}</p>
+                    </div>
+                    <div class="bg-surface-container p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Deploy-Sicherheit{{ else }}Deploy Security{{ end }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Admission Control und Policy Enforcement.{{ else }}Admission control and policy enforcement.{{ end }}</p>
+                    </div>
+                    <div class="bg-surface-container p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Laufzeit-Sicherheit{{ else }}Runtime Security{{ end }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Echtzeit-Bedrohungserkennung und -reaktion.{{ else }}Real-time threat detection and response.{{ end }}</p>
+                    </div>
+                    <div class="bg-surface-container p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Netzwerk-Sicherheit{{ else }}Network Security{{ end }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Zero-Trust-Segmentierung und Verschlüsselung.{{ else }}Zero-trust segmentation and encryption.{{ end }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative">
+                <div class="aspect-video lg:aspect-square rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" alt="Laptop screen showing code and cloud infrastructure diagrams during a security workshop" src="{{ "images/secure-stack.jpg" | absURL }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

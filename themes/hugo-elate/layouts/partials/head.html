@@ -1,35 +1,11 @@
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> {{ .Title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by Pieter Saey" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
-    <meta name="author" content="FREEHTML5.CO / Hugo port " />
- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
-
-  <!-- 
-    //////////////////////////////////////////////////////
-
-    FREE HTML5 TEMPLATE 
-    DESIGNED & DEVELOPED by FREEHTML5.CO
-        
-    Website:        http://freehtml5.co/
-    Email:          info@freehtml5.co
-    Twitter:        http://twitter.com/fh5co
-    Facebook:       https://www.facebook.com/fh5co
-
-    HUGO TEMPLATE PORTED BY Pieter Saey
-
-    Website:        http://saey55.gitlab.io/pietercv
-    Email:          saeypieter@gmail.com
-    Twitter:        http://twitter.com/saey55
-    
-
-    //////////////////////////////////////////////////////
-     -->
+    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 
     <!-- OpenGraph meta tags -->
     <meta property="og:type" content="website" />
@@ -38,18 +14,7 @@
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}">
-    
-    <!-- Twitter Card meta tags (optional - remove if no Twitter presence) -->
-    <!-- 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}" />
-    <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}" />
-    -->
-    
-    <!-- SEO meta tags -->
-    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -80,100 +45,110 @@
                 "@id": "{{ .Site.BaseURL }}#kubernetes-fundamentals",
                 "name": "Introduction to Kubernetes, the secure way",
                 "description": "Learn the core components and architecture of Kubernetes with security-focused hands-on labs.",
-                "provider": {
-                    "@id": "{{ .Site.BaseURL }}#organization"
-                },
+                "provider": { "@id": "{{ .Site.BaseURL }}#organization" },
                 "courseMode": "instructor-led",
                 "educationalLevel": "beginner",
-                "teaches": [
-                    "Kubernetes fundamentals",
-                    "Container security",
-                    "Pod security",
-                    "Network policies"
-                ]
+                "teaches": ["Kubernetes fundamentals", "Container security", "Pod security", "Network policies"]
             },
             {
                 "@type": "Course",
-                "@id": "{{ .Site.BaseURL }}#kubernetes-security", 
+                "@id": "{{ .Site.BaseURL }}#kubernetes-security",
                 "name": "Kubernetes Security",
                 "description": "Deep dive into Kubernetes security concepts and hands-on defense labs.",
-                "provider": {
-                    "@id": "{{ .Site.BaseURL }}#organization"
-                },
+                "provider": { "@id": "{{ .Site.BaseURL }}#organization" },
                 "courseMode": "instructor-led",
                 "educationalLevel": "advanced",
-                "teaches": [
-                    "Advanced Kubernetes security",
-                    "RBAC implementation",
-                    "Security scanning",
-                    "Threat detection"
-                ]
+                "teaches": ["Advanced Kubernetes security", "RBAC implementation", "Security scanning", "Threat detection"]
             }
         ]
     }
     </script>
-<!-- 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
- -->    
-    <!-- canonical link tag -->
-    <link rel="canonical" href="{{ .Permalink }}"/>
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="canonical" href="{{ .Permalink }}"/>
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-    <link rel="stylesheet" href="{{ "css/leaflet.css" | absURL }}" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="{{ "css/animate.css" | absURL }}">
-    <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="{{ "css/icomoon.css" | absURL }}">
-    <!-- Simple Line Icons -->
-    <link rel="stylesheet" href="{{ "css/simple-line-icons.css" | absURL }}">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{ "css/magnific-popup.css" | absURL }}">
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{ "css/bootstrap.css" | absURL }}">
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    <!-- 
-    Default Theme Style 
-    You can change the style.css (default color purple) to one of these styles
-    
-    1. pink.css
-    2. blue.css
-    3. turquoise.css
-    4. orange.css
-    5. lightblue.css
-    6. brown.css
-    7. green.css
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#fbf9f8",
+              "on-secondary-fixed-variant": "#00513d",
+              "surface-bright": "#fbf9f8",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#c0c7d3",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#00497f",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#d2e4ff",
+              "secondary-fixed": "#7bf9ce",
+              "primary-fixed-dim": "#a0c9ff",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#007056",
+              "primary-container": "#3f95ea",
+              "tertiary-fixed-dim": "#cfbdff",
+              "outline": "#717783",
+              "on-surface-variant": "#404751",
+              "primary": "#0061a6",
+              "surface-tint": "#0061a6",
+              "inverse-primary": "#a0c9ff",
+              "on-surface": "#1b1c1c",
+              "on-primary-fixed": "#001c37",
+              "on-primary-container": "#002c50",
+              "secondary": "#006c52",
+              "on-secondary-fixed": "#002117",
+              "on-tertiary-fixed-variant": "#5127ae",
+              "on-background": "#1b1c1c",
+              "on-tertiary-container": "#330084",
+              "tertiary-fixed": "#e8ddff",
+              "background": "#fbf9f8",
+              "inverse-on-surface": "#f3f0f0",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#303030",
+              "secondary-container": "#78f6cb",
+              "tertiary": "#6944c7",
+              "tertiary-container": "#9e7bff",
+              "surface-container-highest": "#e4e2e1",
+              "on-primary": "#ffffff",
+              "surface-variant": "#e4e2e1",
+              "on-error-container": "#93000a",
+              "surface-container-high": "#eae8e7",
+              "secondary-fixed-dim": "#5cdcb2",
+              "surface-dim": "#dcd9d9",
+              "surface-container": "#f0eded",
+              "on-tertiary-fixed": "#21005d",
+              "surface-container-low": "#f6f3f2"
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Inter"],
+              label: ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
 
-    -->
-    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
-
-    <!--
-       custom css files can be configured in config.toml:
-       [params]
-          custom_css = ["css/foo.css", "css/bar.css"]
-     -->
-    {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-    {{ end }}
-
-
-
-    <!-- Modernizr JS -->
-    <script src="{{ "js/modernizr-2.6.2.min.js" | absURL }}"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>

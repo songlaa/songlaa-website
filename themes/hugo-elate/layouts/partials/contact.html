@@ -1,65 +1,66 @@
-	<section id="fh5co-contact" data-section="contact">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">{{ with .Site.Params.contact.title }}{{ . | markdownify }}{{ end }}</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>{{ with .Site.Params.contact.description }}{{ . | markdownify }}{{ end }}</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-md">
-				<div class="col-md-6 to-animate">
-					<h3>{{ with .Site.Params.contact.info }}{{ . | markdownify }}{{ end }}</h3>
-					<ul class="fh5co-contact-info">
-					{{ range .Site.Params.contact.details }}
-						<li class="fh5co-contact-address "><i class="{{ .icon }}"></i>{{ .info | markdownify }}</li>
-					{{ end }}
-					</ul>
-				</div>
-				{{ if .Site.Params.contact.form.enable }}
-				<div class="col-md-6 to-animate">
-					<form target="_blank" action="{{ .Site.Params.contact.form.action }}" method="POST">
-						<div class="form-group">
-							<div class="form-row">
-								<div class="col">
-									{{ if eq .Site.Language.Lang "de" }}
-									<input type="text" name="name" class="form-control" placeholder="Name" required>
-									{{ else }}
-									<input type="text" name="name" class="form-control" placeholder="Full Name" required>
-									{{ end }}
-								</div>
-								<div class="col">
-									{{ if eq .Site.Language.Lang "de" }}
-									<input type="email" name="email" class="form-control" placeholder="E-Mail" required>
-									{{ else }}
-									<input type="email" name="email" class="form-control" placeholder="Email Address" required>
-									{{ end }}
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							{{ if eq .Site.Language.Lang "de" }}
-							<input type="text" name="company" class="form-control" placeholder="Unternehmen">
-							{{ else }}
-							<input type="text" name="company" class="form-control" placeholder="Company (Optional)">
-							{{ end }}
-						</div>
-						<div class="form-group">
-							{{ if eq .Site.Language.Lang "de" }}
-							<textarea placeholder="Nachricht" class="form-control" name="message" rows="6" required></textarea>
-							{{ else }}
-							<textarea placeholder="Tell us about your training requirements or questions" class="form-control" name="message" rows="6" required></textarea>
-							{{ end }}
-						</div>
-						<input type="hidden" name="_subject" value="New Training Inquiry from {{ .Site.Title }}">
-						<input type="text" name="_honey" style="display:none">
-						<button type="submit" class="btn btn-primary btn-lg">{{ .Site.Params.contact.button }}</button>
-					</form>
-				</div>
-				{{ end }}
-			</div>
-		</div>
-	</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-high rounded-t-xl" id="contact">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-extrabold font-headline tracking-tighter mb-8 uppercase">
+                    {{ if eq .Site.Language.Lang "de" }}Kontakt{{ else }}Get in Touch{{ end }}
+                </h2>
+                <p class="text-xl text-on-surface-variant mb-12">
+                    {{ if eq .Site.Language.Lang "de" }}Bereit, die Cloud-Native-Sicherheit Ihres Teams zu verbessern? Schreiben Sie uns und wir erstellen Ihnen ein massgeschneidertes Trainingsangebot.{{ else }}Ready to level up your team's cloud native security? Drop us a message and we'll get back to you with a tailored training proposal.{{ end }}
+                </p>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-on-surface-variant font-medium">{{ if eq .Site.Language.Lang "de" }}E-Mail{{ else }}Email us at{{ end }}</p>
+                            <p class="text-lg font-bold">{{ with .Site.Params.email }}{{ . }}{{ end }}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-on-surface-variant font-medium">{{ if eq .Site.Language.Lang "de" }}Standort{{ else }}Headquarters{{ end }}</p>
+                            <div class="text-lg font-bold">{{ with .Site.Params.location }}{{ . | markdownify }}{{ end }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ if .Site.Params.contact.form.enable }}
+            <div class="bg-surface-container-lowest p-10 md:p-12 rounded-xl shadow-xl">
+                <form target="_blank" action="{{ .Site.Params.contact.form.action }}" method="POST">
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Name{{ else }}Name{{ end }}</label>
+                                <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ if eq .Site.Language.Lang "de" }}Max Mustermann{{ else }}John Doe{{ end }}" type="text" name="name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Unternehmen{{ else }}Company{{ end }}</label>
+                                <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ if eq .Site.Language.Lang "de" }}Unternehmen{{ else }}Tech Corp{{ end }}" type="text" name="company">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Geschäftliche E-Mail{{ else }}Work Email{{ end }}</label>
+                            <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ if eq .Site.Language.Lang "de" }}max@unternehmen.ch{{ else }}john@company.com{{ end }}" type="email" name="email" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Nachricht{{ else }}Message{{ end }}</label>
+                            <textarea class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ if eq .Site.Language.Lang "de" }}Erzählen Sie uns von Ihrem Team und Ihren Trainingsanforderungen...{{ else }}Tell us about your team and training needs...{{ end }}" rows="4" name="message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Training Inquiry from {{ .Site.Title }}">
+                        <input type="text" name="_honey" style="display:none">
+                        <button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                            {{ if eq .Site.Language.Lang "de" }}Nachricht senden{{ else }}Send Message{{ end }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

@@ -39,37 +39,28 @@ subtitle = "delivered by engineers, hands-on and fully customizable"
 [intro]
 
 [[intro.item]]
-title = "Kubernetes Fundamentals"
-description = "Learn Kubernetes from the ground up — with security woven in from the very first pod to a production-ready cluster, through engaging, hands-on exercises."
-url = "#fh5co-kubernetes-fundamentals"
-button = "Learn More"
-icon = "icon-settings"
-img = "img_7.jpg"
+title = "Delivered by Engineers"
+description = "Our instructors aren't just trainers; they are practicing security engineers who build and secure large-scale Kubernetes clusters daily."
+icon = "engineering"
 
 [[intro.item]]
-title = "Kubernetes Security"
-description = "Master Kubernetes with a hands-on focus on security — from network policies to runtime protection, with a strong emphasis on practical labs."
-url = "#fh5co-kubernetes-security"
-button = "Learn More"
-icon = "icon-shield"
-img = "img_8.jpg"
+title = "100% Hands-On"
+description = "Skip the endless slides. Our training is built around real-world scenarios, live-hacking sessions, and intensive laboratory exercises."
+icon = "front_hand"
 
 [[intro.item]]
-title = "Custom Security Training"
-description = "Get a fully tailored security training program for Cloud Native Technologies, designed around your needs — complete with immersive hands-on labs."
-url = "#fh5co-contact"
-button = "Learn More"
-icon = "icon-wrench"
-img = "img_8.jpg"
+title = "Fully Customizable"
+description = "Every team is different. We tailor our curriculum to match your specific tech stack, cloud provider, and internal security policies."
+icon = "tune"
 
 # contact info
-email = "notavailable"
+email = "training@songlaa.com"
 location = """
 **Songlaa GmbH**  
 Bern, Switzerland
 """
 # copyright
-copyright = "© 2025 Songlaa GmbH. All rights reserved."
+copyright = "© 2026 Songlaa GmbH. All rights reserved."
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= ""
 # google tag manager, see https://developers.google.com/tag-manager/
@@ -94,43 +85,13 @@ link = "https://github.com/songlaa"
 title = "linkedin"
 icon = "fab fa-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
 link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
-# recaptch v3 site key
-recaptcha_site_key = "xxx-xxxxxxxxxxxxxxxxxxxxxxxx"
 
 # Contact section
 [contact]
 enable = true
-title = "Get in Touch"
-description = "Ready to enhance your team's Kubernetes and cloud native security skills? Contact us to schedule an on-site training customized for your organization."
-info = "Contact Information"
-button = "Send Message"
-
-[[contact.details]]
-icon = "icon-location-pin"
-info = """**Songlaa GmbH**  
-Bern, Switzerland"""
-
-[[contact.details]]
-icon = "icon-social-linkedin"
-info = """**LinkedIn**  
-[Connect here](https://www.linkedin.com/in/gabriel-graf-6b6446319)"""
 
 [contact.form]
 enable = true
-# FormSubmit.co action URL
 action = "https://formsubmit.co/7fe3785ae223b6189369b2545fde329e"
-# Image on custom success page `/message_sent.html`
-success_image = "images/paper-plane.svg"
 
-
-# Preloader
-[preloader]
-enable = true
-preloader = "" # use jpg, png, svg or gif format.
-
-# Navigation button
-[navigation_button]
-enable = true
-label = "get a quote"
-link = "#fh5co-contact"
 

@@ -1,58 +1,44 @@
-    <header role="banner" id="fh5co-header">
-        <div class="container">
-            <!-- <div class="row"> -->
-            <nav class="navbar navbar-default">
-                <div class="navbar-header">
-                    <!-- Mobile Toggle Menu Button -->
-                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-                    <a class="navbar-brand" href="index.html">{{ with .Site.Params.navigation.brand }}{{ . | markdownify }}{{ end }}</a> 
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">
-
-                    {{ range .Site.Menus.prepend }}
-                        <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+        <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold tracking-tighter text-zinc-900 font-headline no-underline">
+            {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
+        </a>
+        <div class="hidden md:flex gap-8 items-center">
+            <a href="#modules" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Modules</a>
+            <a href="#contact" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Contact</a>
+            {{ if gt (len hugo.Sites) 1 }}
+            <div class="flex items-center gap-2 text-sm font-headline tracking-tight">
+                {{ range $i, $site := hugo.Sites }}
+                    {{ if $i }}<span class="text-zinc-300">/</span>{{ end }}
+                    {{ if eq $site.Language.Lang $.Site.Language.Lang }}
+                        <span class="text-primary font-bold">{{ upper $site.Language.Lang }}</span>
+                    {{ else }}
+                        <a href="/{{ $site.Language.Lang }}/" class="text-zinc-500 hover:text-zinc-900 transition-colors no-underline">{{ upper $site.Language.Lang }}</a>
                     {{ end }}
-
-                    <li class="active"><a href="#" data-nav-section="home"><span>{{ with .Site.Params.navigation.home }}{{ . | markdownify }}{{ end }}</span></a></li>
-                    
-                    {{ if .Site.Params.work.enable }}
-                    <li><a href="#" data-nav-section="work"><span>{{ with .Site.Params.navigation.work }}{{ . | markdownify }}{{ end }}</span></a></li> 
-                    {{ end }}
-
-                    {{ if .Site.Params.testimonials.enable }}
-                    <li><a href="#" data-nav-section="testimonials"><span>{{ with .Site.Params.navigation.testimonials }}{{ . | markdownify }}{{ end }}</span></a></li> 
-                    {{ end }}
-
-                    {{ if .Site.Params.services.enable }}
-                    <li><a href="#" data-nav-section="services"><span>{{ with .Site.Params.navigation.services }}{{ . | markdownify }}{{ end }}</span></a></li> 
-                    {{ end }}
-
-                    {{ if .Site.Params.about.enable }}
-                    <li><a href="#" data-nav-section="about"><span>{{ with .Site.Params.navigation.about }}{{ . | markdownify }}{{ end }}</span></a></li> 
-                    {{ end }}
-
-                    {{ if .Site.Params.contact.enable }}
-                    <li><a href="#" data-nav-section="contact"><span>{{ with .Site.Params.navigation.contact }}{{ . | markdownify }}{{ end }}</span></a></li> 
-                    {{ end }}
-
-                    {{ range .Site.Menus.postpend }}
-                        <li><a class="external" href="{{ .URL }}"><span>{{ .Name | markdownify }}</span></a></li>
-                    {{ end }}
-                    
-                    <!-- Language Switcher -->
-                    {{ if .Site.IsMultiLingual }}
-                    {{ range $lang := .Site.Languages }}
-                        {{ if eq $lang.Lang $.Site.Language.Lang }}
-                            <li class="active"><a href="/{{ $lang.Lang }}/" style="color: #52d3aa !important;"><span>{{ upper $lang.Lang }}</span></a></li>
-                        {{ else }}
-                            <li><a href="/{{ $lang.Lang }}/" class="external"><span>{{ upper $lang.Lang }}</span></a></li>
-                        {{ end }}
-                    {{ end }}
-                    {{ end }}
-                </ul>
+                {{ end }}
             </div>
-        </nav>
-        <!-- </div> -->
+            {{ end }}
+        </div>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-zinc-600" aria-label="Menu">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
     </div>
-</header>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-zinc-100 px-6 py-4">
+        <a href="#modules" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Modules</a>
+        <a href="#contact" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Contact</a>
+        {{ if gt (len hugo.Sites) 1 }}
+        <div class="flex items-center gap-2 py-2 text-sm font-headline tracking-tight">
+            {{ range $i, $site := hugo.Sites }}
+                {{ if $i }}<span class="text-zinc-300">/</span>{{ end }}
+                {{ if eq $site.Language.Lang $.Site.Language.Lang }}
+                    <span class="text-primary font-bold">{{ upper $site.Language.Lang }}</span>
+                {{ else }}
+                    <a href="/{{ $site.Language.Lang }}/" class="text-zinc-500 hover:text-zinc-900 transition-colors no-underline">{{ upper $site.Language.Lang }}</a>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</nav>
