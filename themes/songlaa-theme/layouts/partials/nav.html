@@ -5,7 +5,6 @@
             {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
         </a>
         <div class="hidden md:flex gap-8 items-center">
-            <a href="#modules" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Modules</a>
             <a href="#contact" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Contact</a>
             {{ if gt (len hugo.Sites) 1 }}
             <div class="flex items-center gap-2 text-sm font-headline tracking-tight">
@@ -27,7 +26,6 @@
     </div>
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-zinc-100 px-6 py-4">
-        <a href="#modules" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Modules</a>
         <a href="#contact" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Contact</a>
         {{ if gt (len hugo.Sites) 1 }}
         <div class="flex items-center gap-2 py-2 text-sm font-headline tracking-tight">

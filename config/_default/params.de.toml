@@ -48,7 +48,7 @@ icon = "bolt"
 email = "training@songlaa.com"
 location = """
 **Songlaa GmbH**  
-Bern, Schweiz
+Bern, Switzerland
 """
 copyright = "© 2026 Songlaa GmbH. Alle Rechte vorbehalten."
 custom_script= ""
@@ -57,9 +57,33 @@ google_tag_manager = ""
 # Training sections - match English page exactly
 [kubernetes_fundamentals]
 enable = true
+subtitle = "Sicherheit von Anfang an"
+description = "Fokus auf operatives Fundament und deklaratives Zustandsmanagement – von Anfang an sicher aufgebaut."
+duration = "2 Tage Workshop"
+audience1 = "Engineers, die neu bei Kubernetes sind und eine solide Grundlage für den Produktionsbetrieb benötigen."
+audience2 = "Entwickler, die die Infrastruktur verstehen wollen, auf der ihre Anwendungen laufen."
+outcomes = "Die Teilnehmer werden in der Lage sein, Anwendungen mit Vertrauen in Kubernetes-Clustern bereitzustellen und zu verwalten."
 
-[kubernetes_security] 
+[kubernetes_security]
 enable = true
+description = "Umfassende Sicherheitshärtung vom Container bis zum Cluster-Level."
+duration = "2-3 Tage Workshop"
+audience1 = "Sicherheitsexperten, die für die Prüfung und Absicherung von Cloud-Native-Stacks verantwortlich sind."
+audience2 = "DevOps & Platform Engineers, die Produktionsumgebungen härten."
+outcomes = "Die Teilnehmer werden Kubernetes-Sicherheitsbest Practices, Richtlinien und Kontrollen verstehen und implementieren."
+
+[cilium]
+description = "Massgeschneidertes Curriculum, basierend auf Ihrer Infrastruktur und Ihren Herausforderungen."
+audience1 = "Fortgeschrittene Teams mit spezifischen Compliance- (SOC2/PCI) oder Plattformanforderungen."
+audience2 = "Enterprise-Architektur-Teams, die global skalierbare sichere Plattformen entwerfen."
+platform_specifics_desc = "Spezialisierte Sessions für EKS (AWS), GKE (Google) oder AKS (Azure) Security Best Practices und IAM-Integration."
+advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Service Mesh Security oder HashiCorp Vault Integration."
+
+[secure_stack]
+description = "Moderne Sicherheit ist mehrschichtig. Wir decken den gesamten Lebenszyklus ab, vom Erstellen sicherer Images bis zur Überwachung des Laufzeitverhaltens in Produktionsclustern."
+
+[trainer]
+bio = "Mit über zehn Jahren Erfahrung im Kubernetes Engineering hat Gabriel Graf produktionskritische Cluster in grossem Massstab aufgebaut, gehärtet und betrieben. Als CISSP- und CKA-zertifizierter Engineer verbindet er tiefes Sicherheitswissen mit hands-on Praxis – eine Kombination, die seine Trainings bei Banken, Versicherungen, Pharma-, Tech- und Finanzunternehmen besonders wirkungsvoll macht. Gabriel lebt in Bern und träumt, wenn er nicht gerade Cluster oder Cloud-Lösungen absichert oder aufbaut, vom Meer und vom Surfen."
 
 # Social sites
 [[social]]
@@ -74,6 +98,7 @@ link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
 
 [contact]
 enable = true
+intro = "Bereit, die Cloud-Native-Sicherheit Ihres Teams zu verbessern? Schreiben Sie uns und wir erstellen Ihnen ein massgeschneidertes Trainingsangebot."
 
 [contact.form]
 enable = true

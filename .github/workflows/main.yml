@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - hugo-elate-theme  # Deploy from theme branch as well
+      - songlaa-theme  # Deploy from theme branch as well
   pull_request:
 
 jobs:
@@ -35,7 +35,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/hugo-elate-theme'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/songlaa-theme'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public

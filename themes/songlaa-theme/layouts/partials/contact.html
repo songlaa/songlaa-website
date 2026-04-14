@@ -1,0 +1,59 @@
+<!-- Contact Section -->
+<section class="py-32 relative overflow-hidden rounded-t-xl" id="contact">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0061a6] to-[#006c52]"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-50"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-extrabold font-headline tracking-tighter mb-8 uppercase text-white">
+                    {{ i18n "contact_heading" }}
+                </h2>
+                <p class="text-xl text-white/70 mb-12">
+                    {{ with .Site.Params.contact.intro }}{{ . }}{{ end }}
+                </p>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-[#52d3aa] border border-white/20">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-white/60 font-medium">{{ i18n "contact_location_label" }}</p>
+                            <div class="text-lg font-bold text-white">{{ with .Site.Params.location }}{{ . | markdownify }}{{ end }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ if .Site.Params.contact.form.enable }}
+            <div class="bg-surface-container-lowest p-10 md:p-12 rounded-xl shadow-xl">
+                <form target="_blank" action="{{ .Site.Params.contact.form.action }}" method="POST">
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">Name</label>
+                                <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ i18n "contact_name_placeholder" }}" type="text" name="name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ i18n "contact_company_label" }}</label>
+                                <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ i18n "contact_company_placeholder" }}" type="text" name="company">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ i18n "contact_work_email_label" }}</label>
+                            <input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ i18n "contact_work_email_placeholder" }}" type="email" name="email" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 uppercase tracking-wide text-on-surface-variant">{{ i18n "contact_form_message" }}</label>
+                            <textarea class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="{{ i18n "contact_message_placeholder" }}" rows="4" name="message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Training Inquiry from {{ .Site.Title }}">
+                        <input type="text" name="_honey" style="display:none">
+                        <button class="w-full py-5 bg-[#52d3aa] text-white rounded-full font-bold text-lg hover:scale-[1.02] hover:shadow-lg hover:shadow-[#52d3aa]/25 active:scale-95 transition-all" type="submit">
+                            {{ i18n "submit" }}
+                        </button>
+                    </div>
+                </form>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

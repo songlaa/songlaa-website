@@ -12,12 +12,6 @@
             <p class="text-xl md:text-2xl text-white/80 font-body leading-relaxed mb-12 max-w-2xl">
                 {{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}
             </p>
-            <div class="flex flex-wrap gap-4">
-                <a class="px-10 py-4 bg-[#52d3aa] text-white rounded-full font-bold text-lg hover:scale-105 hover:shadow-lg hover:shadow-[#52d3aa]/25 transition-all inline-flex items-center gap-2 no-underline" href="#modules">
-                    {{ if eq .Site.Language.Lang "de" }}Module ansehen{{ else }}View Modules{{ end }}
-                    <span class="material-symbols-outlined">arrow_downward</span>
-                </a>
-            </div>
         </div>
     </div>
 </section>

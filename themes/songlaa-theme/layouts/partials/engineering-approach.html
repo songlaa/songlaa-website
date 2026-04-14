@@ -1,0 +1,36 @@
+<!-- Your Trainer Section -->
+<section class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" alt="Gabriel Graf – Kubernetes Security Trainer" src="{{ "images/portrait.jpg" | absURL }}">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-[#3f95ea]/15 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute -top-8 -left-8 w-40 h-40 bg-[#52d3aa]/15 rounded-full blur-3xl -z-10"></div>
+            </div>
+            <div>
+                <h2 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface mb-8">
+                    {{ i18n "your_trainer" }}
+                </h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    {{ with .Site.Params.trainer.bio }}{{ . }}{{ end }}
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">workspace_premium</span>
+                        <span class="text-on-surface font-medium">{{ i18n "trainer_certified" }}</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">corporate_fare</span>
+                        <span class="text-on-surface font-medium">{{ i18n "trainer_clients" }}</span>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-primary">history</span>
+                        <span class="text-on-surface font-medium">{{ i18n "trainer_experience" }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

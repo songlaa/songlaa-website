@@ -21,7 +21,7 @@ docker run --rm -it -v $(pwd):/src -p 1313:1313 klakegg/hugo:alpine server --bin
 ## 🔧 Theme Management
 
 ### Current Theme
-This site uses the **hugo-elate** theme, which provides:
+This site uses the **songlaa-theme** custom theme (forked from hugo-elate), which provides:
 - Single-page scrolling design
 - Modern animations and transitions
 - Responsive Bootstrap-based layout
@@ -29,10 +29,10 @@ This site uses the **hugo-elate** theme, which provides:
 
 ### Updating the Theme
 
-If you need to update or modify the hugo-elate theme:
+If you need to update or modify the custom theme:
 
-1. **Theme location**: `themes/hugo-elate/`
-2. **Custom partials**: Training sections are in `themes/hugo-elate/layouts/partials/`
+1. **Theme location**: `themes/songlaa-theme/`
+2. **Custom partials**: Training sections are in `themes/songlaa-theme/layouts/partials/`
    - `kubernetes-fundamentals.html`
    - `kubernetes-security.html` 
    - `cilium.html`
@@ -40,7 +40,7 @@ If you need to update or modify the hugo-elate theme:
 3. **To update theme files**:
    ```bash
    # Backup current customizations
-   git checkout -b theme-update-backup
+   git checkout -b songlaa-theme
    
    # Make your changes to theme files
    # Test thoroughly with docker/hugo server
@@ -84,7 +84,7 @@ The built site will be in the `public/` directory.
 songlaa.com/
 ├── config/_default/          # Hugo configuration files
 ├── content/english/          # Content files (mostly unused due to single-page design)
-├── themes/hugo-elate/        # Hugo Elate theme with customizations
+├── themes/songlaa-theme/     # Custom Songlaa theme (forked from Hugo Elate)
 │   ├── layouts/partials/     # Custom training section templates
 │   └── static/              # Theme assets (CSS, JS, images)
 ├── static/                   # Site-specific static files

@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://songlaa.com/"
 title = "Songlaa Kubernetes Security Trainings"
-theme = "hugo-elate"
+theme = "songlaa-theme"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
