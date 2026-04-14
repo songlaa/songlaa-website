@@ -12,7 +12,8 @@
             {{ partial "intro.html" .}}
 
             <!-- Detailed Module Breakdowns -->
-            <section class="py-32 bg-white space-y-32">
+            <section class="py-32 bg-white space-y-32 relative">
+                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#52d3aa]/30 to-transparent"></div>
                 {{ if .Site.Params.kubernetes_fundamentals.enable }}
                     {{ partial "kubernetes-fundamentals.html" .}}
                 {{ end }}
@@ -33,18 +34,19 @@
             {{ end }}
         </main>
 
-        <footer class="w-full rounded-t-[3rem] mt-20 bg-zinc-100">
+        <footer class="w-full mt-0 bg-[#0a1628]">
+            <div class="h-px bg-gradient-to-r from-transparent via-[#52d3aa]/40 to-transparent"></div>
             <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-6">
-                <div class="font-headline font-bold text-lg text-zinc-900">
+                <div class="font-headline font-bold text-lg text-white">
                     {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
                 </div>
                 <div class="flex gap-8">
-                    <a class="text-zinc-500 hover:text-blue-500 transition-colors font-body text-sm leading-relaxed no-underline" href="#contact">{{ if eq .Site.Language.Lang "de" }}Kontakt{{ else }}Contact{{ end }}</a>
+                    <a class="text-white/50 hover:text-[#52d3aa] transition-colors font-body text-sm leading-relaxed no-underline" href="#contact">{{ if eq .Site.Language.Lang "de" }}Kontakt{{ else }}Contact{{ end }}</a>
                     {{ range .Site.Params.social }}
-                    <a class="text-zinc-500 hover:text-blue-500 transition-colors font-body text-sm leading-relaxed no-underline" href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+                    <a class="text-white/50 hover:text-[#52d3aa] transition-colors font-body text-sm leading-relaxed no-underline" href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
                     {{ end }}
                 </div>
-                <div class="text-zinc-500 font-body text-sm leading-relaxed">
+                <div class="text-white/40 font-body text-sm leading-relaxed">
                     {{ with .Site.Params.copyright }}{{ . | markdownify }}{{ end }}
                 </div>
             </div>

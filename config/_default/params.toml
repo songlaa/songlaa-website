@@ -35,23 +35,23 @@ contact = "Contact"
 title = "Kubernetes & Cloud Native Security On-Site Training"
 subtitle = "delivered by engineers, hands-on and fully customizable"
 
-# Intro section - Our training programs
+# Intro section - Our training programs (module descriptions)
 [intro]
 
 [[intro.item]]
-title = "Delivered by Engineers"
-description = "Our instructors aren't just trainers; they are practicing security engineers who build and secure large-scale Kubernetes clusters daily."
-icon = "engineering"
+title = "Kubernetes Fundamentals"
+description = "Learn Kubernetes from the ground up — with security woven in from the very first pod to a production-ready cluster, through engaging, hands-on exercises."
+icon = "hub"
 
 [[intro.item]]
-title = "100% Hands-On"
-description = "Skip the endless slides. Our training is built around real-world scenarios, live-hacking sessions, and intensive laboratory exercises."
-icon = "front_hand"
+title = "Kubernetes Security"
+description = "Master Kubernetes with a hands-on focus on security — from network policies to runtime protection, with a strong emphasis on practical labs."
+icon = "shield"
 
 [[intro.item]]
-title = "Fully Customizable"
-description = "Every team is different. We tailor our curriculum to match your specific tech stack, cloud provider, and internal security policies."
-icon = "tune"
+title = "Custom Security Training"
+description = "Get a fully tailored security training program for Cloud Native Technologies, designed around your needs — complete with immersive hands-on labs."
+icon = "bolt"
 
 # contact info
 email = "training@songlaa.com"

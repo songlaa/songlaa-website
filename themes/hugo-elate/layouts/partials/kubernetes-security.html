@@ -1,32 +1,35 @@
 <!-- Module 02: Kubernetes Security Detail -->
 <div class="max-w-7xl mx-auto px-6" id="module-security">
     <h2 class="text-3xl font-bold font-headline mb-16 text-center">
-        {{ if eq .Site.Language.Lang "de" }}Im Detail: Kubernetes Security{{ else }}In-Depth: Kubernetes Security{{ end }}
+        {{ if eq .Site.Language.Lang "de" }}Kubernetes Security{{ else }}Kubernetes Security{{ end }}
     </h2>
     <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 mb-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-4">
                 <span class="text-secondary font-bold uppercase tracking-wider text-sm">Module 02</span>
                 <h3 class="text-3xl font-bold font-headline mt-2 mb-6">Security Deep Dive</h3>
-                <p class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Umfassende Sicherheitshärtung vom Container bis zum Cluster-Level.{{ else }}Comprehensive security hardening from the container to the cluster level.{{ end }}</p>
+                <p class="text-on-surface-variant mb-6">{{ if eq .Site.Language.Lang "de" }}Umfassende Sicherheitshärtung vom Container bis zum Cluster-Level.{{ else }}Comprehensive security hardening from the container to the cluster level.{{ end }}</p>
+                <div class="pt-4 border-t border-secondary/20">
+                    <span class="text-secondary font-bold">{{ if eq .Site.Language.Lang "de" }}2-3 Tage Workshop{{ else }}2-3 Days Workshop{{ end }}</span>
+                </div>
             </div>
             <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">policy</span> Policy &amp; Access</h4>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">policy</span> Container &amp; Cluster Security</h4>
                     <ul class="space-y-3 text-sm text-on-surface-variant">
-                        <li class="flex gap-2"><span>•</span> RBAC &amp; Least Privilege</li>
-                        <li class="flex gap-2"><span>•</span> Network Policies (L3/L4/L7)</li>
-                        <li class="flex gap-2"><span>•</span> Pod Security Admission (PSA)</li>
-                        <li class="flex gap-2"><span>•</span> API Server Hardening</li>
+                        <li class="flex gap-2"><span>•</span> Image hardening &amp; security</li>
+                        <li class="flex gap-2"><span>•</span> Pod Security Context</li>
+                        <li class="flex gap-2"><span>•</span> Network Policies &amp; Encryption</li>
+                        <li class="flex gap-2"><span>•</span> RBAC &amp; API Server Access</li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">visibility</span> Defense in Depth</h4>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-secondary">visibility</span> Advanced Topics</h4>
                     <ul class="space-y-3 text-sm text-on-surface-variant">
-                        <li class="flex gap-2"><span>•</span> Runtime Security (Falco)</li>
-                        <li class="flex gap-2"><span>•</span> Secret Encryption at Rest</li>
-                        <li class="flex gap-2"><span>•</span> Image Scanning &amp; SBOMs</li>
-                        <li class="flex gap-2"><span>•</span> Supply Chain (SLSA/Sigstore)</li>
+                        <li class="flex gap-2"><span>•</span> Secure image building &amp; deployment</li>
+                        <li class="flex gap-2"><span>•</span> SBOM for Container-Images</li>
+                        <li class="flex gap-2"><span>•</span> Admission Control</li>
+                        <li class="flex gap-2"><span>•</span> Runtime Security &amp; etcd encryption</li>
                     </ul>
                 </div>
             </div>
@@ -49,24 +52,7 @@
         </div>
         <div class="bg-surface-container rounded-2xl p-8">
             <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Ergebnisse{{ else }}Key Outcomes{{ end }}</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                    <span>Zero-Trust Architecture</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Automatisierte Bedrohungserkennung{{ else }}Automated Threat Detection{{ end }}</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Gehärtete CI/CD-Pipelines{{ else }}Hardened CI/CD Pipelines{{ end }}</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Runtime Forensik{{ else }}Runtime Forensics Mastery{{ end }}</span>
-                </div>
-            </div>
+            <p class="text-on-surface-variant leading-relaxed">{{ if eq .Site.Language.Lang "de" }}Die Teilnehmer werden Kubernetes-Sicherheitsbest Practices, Richtlinien und Kontrollen verstehen und implementieren.{{ else }}Participants will understand and implement Kubernetes security best practices, policies, and controls.{{ end }}</p>
         </div>
     </div>
 </div>

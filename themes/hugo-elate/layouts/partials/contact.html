@@ -1,31 +1,33 @@
 <!-- Contact Section -->
-<section class="py-32 bg-surface-container-high rounded-t-xl" id="contact">
-    <div class="max-w-7xl mx-auto px-6">
+<section class="py-32 relative overflow-hidden rounded-t-xl" id="contact">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0061a6] to-[#006c52]"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvc3ZnPg==')] opacity-50"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-                <h2 class="text-5xl font-extrabold font-headline tracking-tighter mb-8 uppercase">
+                <h2 class="text-5xl font-extrabold font-headline tracking-tighter mb-8 uppercase text-white">
                     {{ if eq .Site.Language.Lang "de" }}Kontakt{{ else }}Get in Touch{{ end }}
                 </h2>
-                <p class="text-xl text-on-surface-variant mb-12">
+                <p class="text-xl text-white/70 mb-12">
                     {{ if eq .Site.Language.Lang "de" }}Bereit, die Cloud-Native-Sicherheit Ihres Teams zu verbessern? Schreiben Sie uns und wir erstellen Ihnen ein massgeschneidertes Trainingsangebot.{{ else }}Ready to level up your team's cloud native security? Drop us a message and we'll get back to you with a tailored training proposal.{{ end }}
                 </p>
                 <div class="space-y-8">
                     <div class="flex items-center gap-6">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-[#52d3aa] border border-white/20">
                             <span class="material-symbols-outlined">mail</span>
                         </div>
                         <div>
-                            <p class="text-sm text-on-surface-variant font-medium">{{ if eq .Site.Language.Lang "de" }}E-Mail{{ else }}Email us at{{ end }}</p>
-                            <p class="text-lg font-bold">{{ with .Site.Params.email }}{{ . }}{{ end }}</p>
+                            <p class="text-sm text-white/60 font-medium">{{ if eq .Site.Language.Lang "de" }}E-Mail{{ else }}Email us at{{ end }}</p>
+                            <p class="text-lg font-bold text-white">{{ with .Site.Params.email }}{{ . }}{{ end }}</p>
                         </div>
                     </div>
                     <div class="flex items-center gap-6">
-                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-white/15 backdrop-blur-sm flex items-center justify-center text-[#52d3aa] border border-white/20">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
                         <div>
-                            <p class="text-sm text-on-surface-variant font-medium">{{ if eq .Site.Language.Lang "de" }}Standort{{ else }}Headquarters{{ end }}</p>
-                            <div class="text-lg font-bold">{{ with .Site.Params.location }}{{ . | markdownify }}{{ end }}</div>
+                            <p class="text-sm text-white/60 font-medium">{{ if eq .Site.Language.Lang "de" }}Standort{{ else }}Headquarters{{ end }}</p>
+                            <div class="text-lg font-bold text-white">{{ with .Site.Params.location }}{{ . | markdownify }}{{ end }}</div>
                         </div>
                     </div>
                 </div>
@@ -54,7 +56,7 @@
                         </div>
                         <input type="hidden" name="_subject" value="New Training Inquiry from {{ .Site.Title }}">
                         <input type="text" name="_honey" style="display:none">
-                        <button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                        <button class="w-full py-5 bg-[#52d3aa] text-white rounded-full font-bold text-lg hover:scale-[1.02] hover:shadow-lg hover:shadow-[#52d3aa]/25 active:scale-95 transition-all" type="submit">
                             {{ if eq .Site.Language.Lang "de" }}Nachricht senden{{ else }}Send Message{{ end }}
                         </button>
                     </div>

@@ -1,32 +1,35 @@
 <!-- Module 01: Kubernetes Fundamentals Detail -->
 <div class="max-w-7xl mx-auto px-6" id="module-fundamentals">
     <h2 class="text-3xl font-bold font-headline mb-16 text-center">
-        {{ if eq .Site.Language.Lang "de" }}Im Detail: Kubernetes Fundamentals{{ else }}In-Depth: Kubernetes Fundamentals{{ end }}
+        {{ if eq .Site.Language.Lang "de" }}Kubernetes Fundamentals{{ else }}Kubernetes Fundamentals{{ end }}
     </h2>
     <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 mb-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-4">
                 <span class="text-primary font-bold uppercase tracking-wider text-sm">Module 01</span>
-                <h3 class="text-3xl font-bold font-headline mt-2 mb-6">Core Curriculum</h3>
-                <p class="text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Operationale Grundlagen und deklaratives State Management.{{ else }}Focusing on the operational foundation and declarative state management.{{ end }}</p>
+                <h3 class="text-3xl font-bold font-headline mt-2 mb-6">Security from the start</h3>
+                <p class="text-on-surface-variant mb-6">{{ if eq .Site.Language.Lang "de" }}Focusing on the operational foundation, declarative state management all in a secure manner.{{ else }}Focusing on the operational foundation, declarative state management all in a secure manner.{{ end }}</p>
+                <div class="pt-4 border-t border-primary/20">
+                    <span class="text-primary font-bold">{{ if eq .Site.Language.Lang "de" }}2 Tage Workshop{{ else }}2 Days Workshop{{ end }}</span>
+                </div>
             </div>
             <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">data_object</span> Concepts</h4>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">data_object</span> Foundations</h4>
                     <ul class="space-y-3 text-sm text-on-surface-variant">
-                        <li class="flex gap-2"><span>•</span> Control Plane &amp; Worker Nodes</li>
-                        <li class="flex gap-2"><span>•</span> Pods, Deployments, ReplicaSets</li>
-                        <li class="flex gap-2"><span>•</span> Services &amp; Ingress Networking</li>
-                        <li class="flex gap-2"><span>•</span> Namespaces &amp; Resource Scoping</li>
+                        <li class="flex gap-2"><span>•</span> Container, Images &amp; Kubernetes basics</li>
+                        <li class="flex gap-2"><span>•</span> Docker &amp; Kubernetes architecture</li>
+                        <li class="flex gap-2"><span>•</span> Application deployment</li>
+                        <li class="flex gap-2"><span>•</span> Service layer &amp; discovery</li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">settings_applications</span> Operations</h4>
+                    <h4 class="font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">settings_applications</span> Management</h4>
                     <ul class="space-y-3 text-sm text-on-surface-variant">
-                        <li class="flex gap-2"><span>•</span> Declarative YAML Management</li>
-                        <li class="flex gap-2"><span>•</span> ConfigMaps &amp; Secrets</li>
-                        <li class="flex gap-2"><span>•</span> Storage: PV &amp; StorageClasses</li>
-                        <li class="flex gap-2"><span>•</span> Logs &amp; Metrics Observability</li>
+                        <li class="flex gap-2"><span>•</span> Storage in Kubernetes</li>
+                        <li class="flex gap-2"><span>•</span> Resource types (StatefulSet, DaemonSet, Job)</li>
+                        <li class="flex gap-2"><span>•</span> Network Policies &amp; Security Context</li>
+                        <li class="flex gap-2"><span>•</span> Troubleshooting</li>
                     </ul>
                 </div>
             </div>
@@ -49,24 +52,7 @@
         </div>
         <div class="bg-surface-container rounded-2xl p-8">
             <h4 class="font-bold text-xl mb-6">{{ if eq .Site.Language.Lang "de" }}Ergebnisse{{ else }}Key Outcomes{{ end }}</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}kubectl Meisterschaft{{ else }}Master kubectl mastery{{ end }}</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Komplexe Workloads deployen{{ else }}Deploy complex workloads{{ end }}</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Cluster-Status verwalten{{ else }}Manage cluster state{{ end }}</span>
-                </div>
-                <div class="flex items-start gap-2 text-sm">
-                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                    <span>{{ if eq .Site.Language.Lang "de" }}Grundlegendes Troubleshooting{{ else }}Basic troubleshooting{{ end }}</span>
-                </div>
-            </div>
+            <p class="text-on-surface-variant leading-relaxed">{{ if eq .Site.Language.Lang "de" }}Die Teilnehmer werden in der Lage sein, Anwendungen mit Vertrauen in Kubernetes-Clustern bereitzustellen und zu verwalten.{{ else }}Participants will be able to deploy and manage applications in Kubernetes clusters with confidence.{{ end }}</p>
         </div>
     </div>
 </div>

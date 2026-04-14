@@ -10,19 +10,19 @@
                     {{ if eq .Site.Language.Lang "de" }}Moderne Sicherheit ist mehrschichtig. Wir decken den gesamten Lebenszyklus ab, vom Erstellen sicherer Images bis zur Überwachung des Laufzeitverhaltens in Produktionsclustern.{{ else }}Modern security is multi-layered. We cover the entire lifecycle, from building secure images to monitoring runtime behavior in high-traffic production clusters.{{ end }}
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-surface-container p-6 rounded-lg">
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-100/50">
                         <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Build-Sicherheit{{ else }}Build Security{{ end }}</h4>
                         <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Härtung von Containern und CI/CD-Pipelines.{{ else }}Hardening containers and CI/CD pipelines.{{ end }}</p>
                     </div>
-                    <div class="bg-surface-container p-6 rounded-lg">
+                    <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-lg border border-teal-100/50">
                         <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Deploy-Sicherheit{{ else }}Deploy Security{{ end }}</h4>
                         <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Admission Control und Policy Enforcement.{{ else }}Admission control and policy enforcement.{{ end }}</p>
                     </div>
-                    <div class="bg-surface-container p-6 rounded-lg">
+                    <div class="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-lg border border-emerald-100/50">
                         <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Laufzeit-Sicherheit{{ else }}Runtime Security{{ end }}</h4>
                         <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Echtzeit-Bedrohungserkennung und -reaktion.{{ else }}Real-time threat detection and response.{{ end }}</p>
                     </div>
-                    <div class="bg-surface-container p-6 rounded-lg">
+                    <div class="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-lg border border-indigo-100/50">
                         <h4 class="font-bold mb-2">{{ if eq .Site.Language.Lang "de" }}Netzwerk-Sicherheit{{ else }}Network Security{{ end }}</h4>
                         <p class="text-sm text-on-surface-variant">{{ if eq .Site.Language.Lang "de" }}Zero-Trust-Segmentierung und Verschlüsselung.{{ else }}Zero-trust segmentation and encryption.{{ end }}</p>
                     </div>
@@ -32,6 +32,8 @@
                 <div class="aspect-video lg:aspect-square rounded-xl overflow-hidden shadow-2xl">
                     <img class="w-full h-full object-cover" alt="Laptop screen showing code and cloud infrastructure diagrams during a security workshop" src="{{ "images/secure-stack.jpg" | absURL }}">
                 </div>
+                <div class="absolute -top-8 -right-8 w-48 h-48 bg-[#52d3aa]/15 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-[#3f95ea]/15 rounded-full blur-3xl -z-10"></div>
             </div>
         </div>
     </div>
