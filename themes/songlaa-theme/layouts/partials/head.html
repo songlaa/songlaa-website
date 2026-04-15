@@ -78,6 +78,7 @@
 
     <!-- Tailwind Config -->
     <script>
+      {{ $strictBrand := eq .Site.Params.design.color_variant "strict-brand" }}
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -98,7 +99,7 @@
               "error": "#ba1a1a",
               "on-secondary-container": "#007056",
               "primary-container": "#3f95ea",
-              "tertiary-fixed-dim": "#cfbdff",
+              "tertiary-fixed-dim": "{{ if $strictBrand }}#66bfff{{ else }}#cfbdff{{ end }}",
               "outline": "#717783",
               "on-surface-variant": "#404751",
               "primary": "#0061a6",
@@ -109,17 +110,17 @@
               "on-primary-container": "#002c50",
               "secondary": "#006c52",
               "on-secondary-fixed": "#002117",
-              "on-tertiary-fixed-variant": "#5127ae",
+              "on-tertiary-fixed-variant": "{{ if $strictBrand }}#00598f{{ else }}#5127ae{{ end }}",
               "on-background": "#1b1c1c",
-              "on-tertiary-container": "#330084",
-              "tertiary-fixed": "#e8ddff",
+              "on-tertiary-container": "{{ if $strictBrand }}#003253{{ else }}#330084{{ end }}",
+              "tertiary-fixed": "{{ if $strictBrand }}#d9eeff{{ else }}#e8ddff{{ end }}",
               "background": "#fbf9f8",
               "inverse-on-surface": "#f3f0f0",
               "on-tertiary": "#ffffff",
               "inverse-surface": "#303030",
               "secondary-container": "#78f6cb",
-              "tertiary": "#6944c7",
-              "tertiary-container": "#9e7bff",
+              "tertiary": "{{ if $strictBrand }}#0079c2{{ else }}#5c4bb0{{ end }}",
+              "tertiary-container": "{{ if $strictBrand }}#8fd0ff{{ else }}#b5a1ff{{ end }}",
               "surface-container-highest": "#e4e2e1",
               "on-primary": "#ffffff",
               "surface-variant": "#e4e2e1",
@@ -128,7 +129,7 @@
               "secondary-fixed-dim": "#5cdcb2",
               "surface-dim": "#dcd9d9",
               "surface-container": "#f0eded",
-              "on-tertiary-fixed": "#21005d",
+              "on-tertiary-fixed": "{{ if $strictBrand }}#002741{{ else }}#21005d{{ end }}",
               "surface-container-low": "#f6f3f2"
             },
             borderRadius: {

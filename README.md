@@ -35,7 +35,7 @@ If you need to update or modify the custom theme:
 2. **Custom partials**: Training sections are in `themes/songlaa-theme/layouts/partials/`
    - `kubernetes-fundamentals.html`
    - `kubernetes-security.html` 
-   - `cilium.html`
+   - `custom-training.html`
 
 3. **To update theme files**:
    ```bash
@@ -62,7 +62,7 @@ If you need to update or modify the custom theme:
 Training content is managed in `config/_default/params.toml` under these sections:
 - `[kubernetes_fundamentals]`
 - `[kubernetes_security]` 
-- `[cilium]`
+- `[custom_training]`
 
 To update training information, modify the content in these sections and restart the development server.
 

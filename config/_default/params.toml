@@ -20,6 +20,11 @@ keywords = "kubernetes training, kubernetes security, cloud native security, doc
 # Whether to display text descriptors (like "E-mail: ", "Phone: ") before the address block elements
 address_descriptors = false
 
+# Design options
+[design]
+# Options: "balanced-accent" (muted violet accent), "strict-brand" (blue/teal only)
+color_variant = "balanced-accent"
+
 # Navigation
 [navigation]
 brand = "Songlaa"
@@ -69,27 +74,27 @@ google_tag_manager = "" # example: G-XXXXXXXXXX
 # Training sections for the homepage
 [kubernetes_fundamentals]
 enable = true
-subtitle = "Security from the start"
-description = "Focusing on the operational foundation, declarative state management all in a secure manner."
+subtitle = "Introduction to Kubernetes, the secure way"
+description = "Learn the core components and architecture of Kubernetes with security-focused hands-on labs."
 duration = "2 Days Workshop"
-audience1 = "Engineers new to Kubernetes who need a solid foundation for production operations."
+audience1 = "Beginners or professionals who want to understand Kubernetes fundamentals."
 audience2 = "Developers wanting to understand the infrastructure their applications run on."
-outcomes = "Participants will be able to deploy and manage applications in Kubernetes clusters with confidence."
+outcomes = "Participants will be able to securely build, deploy and manage applications in Kubernetes clusters with confidence."
 
 [kubernetes_security]
 enable = true
-description = "Comprehensive security hardening from the container to the cluster level."
+description = "Comprehensive security hardening from the container to the cluster level. Focus on Hands-On Lab with CTFs included."
 duration = "2-3 Days Workshop"
-audience1 = "Security professionals responsible for auditing and securing cloud-native stacks."
-audience2 = "DevOps & Platform Engineers hardening production environments."
-outcomes = "Participants will understand and implement Kubernetes security best practices, policies, and controls."
+audience1 = "Professionals responsible for auditing and securing cloud-native stacks."
+audience2 = "CISO, DevOps & Platform Engineers hardening production environments."
+outcomes = "Participants will securely build, deploy and manage applications in Kubernetes and understand and implement Kubernetes security best practices, policies, and controls."
 
-[cilium]
-description = "Bespoke curriculum designed around your unique infrastructure and challenges."
-audience1 = "Advanced teams with specific compliance (SOC2/PCI) or platform requirements."
-audience2 = "Enterprise architecture teams designing global-scale secure platforms."
-platform_specifics_desc = "Specialized sessions for EKS (AWS), GKE (Google), or AKS (Azure) security best practices and IAM integration."
-advanced_tooling_desc = "Deep dives into specific tools like Cilium, Istio Service Mesh security, or HashiCorp Vault integration."
+[custom_training]
+description = "Get a fully tailored security training program for Cloud Native Technologies, designed around your needs — complete with immersive hands-on labs."
+audience1 = "Custom trainings are for everyone interested in Cloud Security: from Dev to Management"
+audience2 = "Can be tailored as a workshop or as a Deep Dive."
+platform_specifics_desc = "Custom trainins can focus on your specific platforms (AKS, On-Prem) etc."
+advanced_tooling_desc = "Deep dives into specific tools like Cilium, Istio Service Mesh security, or HashiCorp Terraform IaC."
 
 [secure_stack]
 description = "Modern security is multi-layered. We cover the entire lifecycle, from building secure images to monitoring runtime behavior in high-traffic production clusters."

@@ -15,6 +15,11 @@ image = "images/logo.png"
 keywords = "kubernetes schulung, kubernetes sicherheit, cloud native security, docker training, container sicherheit, DevSecOps, cybersecurity training"
 address_descriptors = false
 
+# Design options
+[design]
+# Options: "balanced-accent" (gedaempfter Violett-Akzent), "strict-brand" (nur Blau/Tuerkis)
+color_variant = "balanced-accent"
+
 # Navigation (Keep English) - match base params.toml exactly
 [navigation]
 brand = "Songlaa"
@@ -72,12 +77,12 @@ audience1 = "Sicherheitsexperten, die für die Prüfung und Absicherung von Clou
 audience2 = "DevOps & Platform Engineers, die Produktionsumgebungen härten."
 outcomes = "Die Teilnehmer werden Kubernetes-Sicherheitsbest Practices, Richtlinien und Kontrollen verstehen und implementieren."
 
-[cilium]
-description = "Massgeschneidertes Curriculum, basierend auf Ihrer Infrastruktur und Ihren Herausforderungen."
-audience1 = "Fortgeschrittene Teams mit spezifischen Compliance- (SOC2/PCI) oder Plattformanforderungen."
-audience2 = "Enterprise-Architektur-Teams, die global skalierbare sichere Plattformen entwerfen."
-platform_specifics_desc = "Spezialisierte Sessions für EKS (AWS), GKE (Google) oder AKS (Azure) Security Best Practices und IAM-Integration."
-advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Service Mesh Security oder HashiCorp Vault Integration."
+[custom_training]
+description = "Individuelle Cloud Native Security-Trainings, auf Ihre Anforderungen zugeschnitten – Theorie und praxisorientierten Hands-on-Labs"
+audience1 = "Individuelle Trainings können an die jeweilige Situation angepasst werden."
+audience2 = "Die Trainings können als Workshop ode DeepDive angelegt werden."
+platform_specifics_desc = "Der Fokus der Schulung ist abhängig von Ihnen und Ihrer Infrastruktur."
+advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Service Mesh Security oder HashiCorp IaC."
 
 [secure_stack]
 description = "Moderne Sicherheit ist mehrschichtig. Wir decken den gesamten Lebenszyklus ab, vom Erstellen sicherer Images bis zur Überwachung des Laufzeitverhaltens in Produktionsclustern."
