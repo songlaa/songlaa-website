@@ -46,7 +46,7 @@ icon = "shield"
 
 [[intro.item]]
 title = "Custom Security Training"
-description = "Erhalten Sie ein vollständig maßgeschneidertes Sicherheitstrainingsprogramm für Cloud Native Technologies, entworfen nach Ihren Anforderungen – mit intensiven praktischen Labs."
+description = "Erhalten Sie ein vollständig massgeschneidertes Training für Cloud Native Technologies, entworfen nach Ihren Anforderungen – mit intensiven praktischen Labs."
 icon = "bolt"
 
 # Contact info
@@ -84,8 +84,8 @@ audience2 = "Die Trainings können als Workshop ode DeepDive angelegt werden."
 platform_specifics_desc = "Der Fokus der Schulung ist abhängig von Ihnen und Ihrer Infrastruktur."
 advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Service Mesh Security oder HashiCorp IaC."
 
-[secure_stack]
-description = "Moderne Sicherheit ist mehrschichtig. Wir decken den gesamten Lebenszyklus ab, vom Erstellen sicherer Images bis zur Überwachung des Laufzeitverhaltens in Produktionsclustern."
+[training_philosophy]
+description = "Unsere Trainings basieren auf einem Grundsatz: Wir lehren nur, was wir selbst in Produktion betreiben. Jedes Konzept ist praxiserprobt, jedes Lab ist realistisch, und jede Erkenntnis stammt aus echtem Kubernetes-Betrieb im grossen Massstab."
 
 [trainer]
 bio = "Mit über zehn Jahren Erfahrung im Kubernetes Engineering hat Gabriel Graf produktionskritische Cluster in grossem Massstab aufgebaut, gehärtet und betrieben. Als CISSP- und CKA-zertifizierter Engineer verbindet er tiefes Sicherheitswissen mit hands-on Praxis – eine Kombination, die seine Trainings bei Banken, Versicherungen, Pharma-, Tech- und Finanzunternehmen besonders wirkungsvoll macht. Gabriel lebt in Bern und träumt, wenn er nicht gerade Cluster oder Cloud-Lösungen absichert oder aufbaut, vom Meer und vom Surfen."
@@ -103,7 +103,7 @@ link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
 
 [contact]
 enable = true
-intro = "Bereit, die Cloud-Native-Sicherheit Ihres Teams zu verbessern? Schreiben Sie uns und wir erstellen Ihnen ein massgeschneidertes Trainingsangebot."
+intro = "Bereit Ihr Cloud-Native-Sicherheit zu erweitern? Schreiben Sie uns und wir erstellen Ihnen ein individuelles Trainingsangebot."
 
 [contact.form]
 enable = true

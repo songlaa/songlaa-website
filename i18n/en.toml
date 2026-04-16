@@ -25,6 +25,16 @@ read_more = "Continue reading"
 submit = "Send message"
 tags = "Tags"
 
+training_philosophy_title = "How We Teach"
+philosophy_practice = "Practice-First"
+philosophy_practice_desc = "We only teach what we run in production ourselves. Every topic is grounded in real engineering experience."
+philosophy_handson = "Hands-On Labs"
+philosophy_handson_desc = "Labs make up the majority of every training. You leave with skills you can apply the next day."
+philosophy_setup = "Minimal Setup"
+philosophy_setup_desc = "All you need is a laptop and a browser. No complex pre-configuration, no wasted time at the start."
+philosophy_atmosphere = "Engaging & Relaxed"
+philosophy_atmosphere_desc = "Stimulating content delivered in a friendly, low-pressure atmosphere — learning that actually sticks."
+
 # Site-specific UI labels
 view_modules = "View Modules"
 who_should_attend = "Who should attend"

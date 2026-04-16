@@ -1,36 +1,36 @@
-<!-- The Secure Kubernetes Stack Section -->
+<!-- Training Philosophy Section -->
 <section class="py-32 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="order-2 lg:order-1">
                 <h2 class="text-4xl font-extrabold font-headline tracking-tight text-on-surface mb-8">
-                    {{ i18n "secure_stack_title" }}
+                    {{ i18n "training_philosophy_title" }}
                 </h2>
                 <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                    {{ with .Site.Params.secure_stack.description }}{{ . }}{{ end }}
+                    {{ with .Site.Params.training_philosophy.description }}{{ . }}{{ end }}
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg border border-blue-100/50">
-                        <h4 class="font-bold mb-2">{{ i18n "build_security" }}</h4>
-                        <p class="text-sm text-on-surface-variant">{{ i18n "build_security_desc" }}</p>
+                        <h4 class="font-bold mb-2">{{ i18n "philosophy_practice" }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ i18n "philosophy_practice_desc" }}</p>
                     </div>
                     <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-lg border border-teal-100/50">
-                        <h4 class="font-bold mb-2">{{ i18n "deploy_security" }}</h4>
-                        <p class="text-sm text-on-surface-variant">{{ i18n "deploy_security_desc" }}</p>
+                        <h4 class="font-bold mb-2">{{ i18n "philosophy_handson" }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ i18n "philosophy_handson_desc" }}</p>
                     </div>
                     <div class="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-lg border border-emerald-100/50">
-                        <h4 class="font-bold mb-2">{{ i18n "runtime_security" }}</h4>
-                        <p class="text-sm text-on-surface-variant">{{ i18n "runtime_security_desc" }}</p>
+                        <h4 class="font-bold mb-2">{{ i18n "philosophy_setup" }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ i18n "philosophy_setup_desc" }}</p>
                     </div>
                     <div class="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-lg border border-indigo-100/50">
-                        <h4 class="font-bold mb-2">{{ i18n "network_security" }}</h4>
-                        <p class="text-sm text-on-surface-variant">{{ i18n "network_security_desc" }}</p>
+                        <h4 class="font-bold mb-2">{{ i18n "philosophy_atmosphere" }}</h4>
+                        <p class="text-sm text-on-surface-variant">{{ i18n "philosophy_atmosphere_desc" }}</p>
                     </div>
                 </div>
             </div>
             <div class="order-1 lg:order-2 relative">
                 <div class="aspect-video lg:aspect-square rounded-xl overflow-hidden shadow-2xl">
-                    <img class="w-full h-full object-cover" alt="Laptop screen showing code and cloud infrastructure diagrams during a security workshop" src="{{ "images/secure-stack.jpg" | absURL }}">
+                    <img class="w-full h-full object-cover" alt="Hands-on Kubernetes security training workshop" src="{{ "images/secure-stack.jpg" | absURL }}">
                 </div>
                 <div class="absolute -top-8 -right-8 w-48 h-48 bg-[#52d3aa]/15 rounded-full blur-3xl -z-10"></div>
                 <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-[#3f95ea]/15 rounded-full blur-3xl -z-10"></div>

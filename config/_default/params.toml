@@ -96,8 +96,8 @@ audience2 = "Can be tailored as a workshop or as a Deep Dive."
 platform_specifics_desc = "Custom trainins can focus on your specific platforms (AKS, On-Prem) etc."
 advanced_tooling_desc = "Deep dives into specific tools like Cilium, Istio Service Mesh security, or HashiCorp Terraform IaC."
 
-[secure_stack]
-description = "Modern security is multi-layered. We cover the entire lifecycle, from building secure images to monitoring runtime behavior in high-traffic production clusters."
+[training_philosophy]
+description = "Our trainings are built around one principle: we only teach what we run ourselves in production. That means every concept is battle-tested, every lab is realistic, and every insight is drawn from real-world Kubernetes operations at scale."
 
 [trainer]
 bio = "With over a decade of hands-on Kubernetes engineering, Gabriel Graf has built, hardened, and operated production-critical clusters at scale. CISSP and CKA certified, he brings deep security expertise combined with real-world operational experience – a combination that has made his trainings highly effective for banks, insurances, pharma, tech, and financial services companies. Based in Bern, Gabriel is usually dreaming of the sea and surfing when he's not securing or building clusters or cloud solutions."
