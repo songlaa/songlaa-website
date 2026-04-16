@@ -12,7 +12,7 @@
             {{ partial "intro.html" .}}
 
             <!-- Detailed Module Breakdowns -->
-            <section class="py-32 bg-white space-y-32 relative">
+            <section class="pt-8 pb-32 bg-white space-y-32 relative">
                 <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#52d3aa]/30 to-transparent"></div>
                 {{ if .Site.Params.kubernetes_fundamentals.enable }}
                     {{ partial "kubernetes-fundamentals.html" .}}

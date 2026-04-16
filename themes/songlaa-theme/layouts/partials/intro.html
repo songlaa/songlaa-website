@@ -1,17 +1,24 @@
 <!-- Training Approach Section -->
 <section class="py-24 bg-white border-b border-surface-container relative overflow-hidden">
     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3f95ea] via-[#52d3aa] to-[#3f95ea]"></div>
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {{ range .Site.Params.intro.item }}
-            <div class="flex flex-col gap-4">
+            <a href="{{ .link }}" class="group flex flex-col gap-4 rounded-3xl border border-surface-container bg-white p-8 shadow-[0_12px_30px_rgba(10,22,40,0.05)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(10,22,40,0.10)] hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 no-underline">
                 <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                     <span class="material-symbols-outlined">{{ .icon }}</span>
                 </div>
-                <h3 class="text-xl font-bold font-headline">{{ .title }}</h3>
-                <p class="text-on-surface-variant">{{ .description }}</p>
-            </div>
+                <h3 class="text-xl font-bold font-headline text-on-surface">{{ .title }}</h3>
+                <p class="text-on-surface-variant leading-relaxed">{{ .description }}</p>
+            </a>
             {{ end }}
         </div>
+        {{ with .Site.Params.intro.description }}
+        <div class="max-w-5xl mt-14 mx-auto text-center">
+            <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                {{ . }}
+            </p>
+        </div>
+        {{ end }}
     </div>
 </section>

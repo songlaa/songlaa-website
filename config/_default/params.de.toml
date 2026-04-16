@@ -33,21 +33,25 @@ subtitle = "von Engineers, praxisorientiert und individuell anpassbar"
 
 # Intro section (German - module descriptions)
 [intro]
+description = "Kubernetes kann komplex wirken, besonders wenn Sicherheit von Anfang an mitgedacht werden soll. Wir wissen das, weil wir solche Plattformen selbst täglich konzipieren, bauen und absichern. In unseren drei Trainings, Kubernetes Fundamentals, Kubernetes Security und Custom Security Training, machen wir Theorie praxisnah, zeigen reale Vorgehensweisen und setzen bewährte Best Practices gemeinsam hands-on um."
 
 [[intro.item]]
 title = "Kubernetes Fundamentals"
 description = "Erlernen Sie Kubernetes von Grund auf – mit Sicherheit vom ersten Pod bis zu einem produktionsreifen Cluster, durch ansprechende praktische Übungen."
 icon = "hub"
+link = "#module-fundamentals"
 
 [[intro.item]]
 title = "Kubernetes Security"
 description = "Meistern Sie Kubernetes mit einem praxisorientierten Fokus auf Sicherheit – von Netzwerk-Richtlinien bis zum Laufzeitschutz, mit Schwerpunkt auf praktischen Labs."
 icon = "shield"
+link = "#module-security"
 
 [[intro.item]]
 title = "Custom Security Training"
 description = "Erhalten Sie ein vollständig massgeschneidertes Training für Cloud Native Technologies, entworfen nach Ihren Anforderungen – mit intensiven praktischen Labs."
 icon = "bolt"
+link = "#module-custom"
 
 # Contact info
 email = "training@songlaa.com"
