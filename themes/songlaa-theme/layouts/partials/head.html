@@ -16,7 +16,7 @@
     {{ $xDefaultHref := "/" | absURL }}
     {{ if .IsTranslated }}
     {{ range .AllTranslations }}
-    <link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Lang }}" href="{{ .Permalink }}" />
+    <link rel="alternate" hreflang="{{ .Site.LanguageCode | default .Lang }}" href="{{ .Permalink }}" />
     {{ if eq .Lang "en" }}{{ $xDefaultHref = .Permalink }}{{ end }}
     {{ end }}
     {{ end }}
@@ -28,8 +28,8 @@
     <meta property="og:locale" content="{{ replace (.Site.LanguageCode | default "en-US") "-" "_" }}">
     {{ if .IsTranslated }}
     {{ range .AllTranslations }}
-    {{ if ne .Lang $.Site.Language.Lang }}
-    <meta property="og:locale:alternate" content="{{ replace (.Language.LanguageCode | default .Lang) "-" "_" }}">
+    {{ if ne .Lang $.Lang }}
+    <meta property="og:locale:alternate" content="{{ replace (.Site.LanguageCode | default .Lang) "-" "_" }}">
     {{ end }}
     {{ end }}
     {{ end }}
