@@ -1,8 +1,8 @@
 ---
-title: "Kubernetes Security"
+title: "Kubernetes Security - Deep Dive"
 date: 2025-10-20
 draft: false
-description: "Kubernetes Security Deep Dive mit praxisorientierten hands-on Labs."
+description: "Intensivtraining zu Kubernetes-Sicherheit mit praxisnahen Hands-on-Labs."
 ---
 
 ## Überblick
@@ -10,28 +10,28 @@ description: "Kubernetes Security Deep Dive mit praxisorientierten hands-on Labs
 - Einführung und Grundkonzepte
     - Container- und Kubernetes-Grundlagen
 - Container-Sicherheit
-    - Image-Grösse, Hardening, Privileges und Security
+    - Image-Grösse, Hardening, Privileges und Security-Basics
     - Docker-Architektur
 - Kubernetes- und Netzwerksicherheit
-    - Secrets und External Operators
+    - Secrets und externe Operatoren
     - Ingress
-    - Network Policies und Encryption
+    - Network Policies und Verschlüsselung
 - Pod-Security-Context
 - Cloud-Native Security und Kubernetes
     - Secure Image Building und Deployment
-    - SBOM für Container Images
+    - SBOM für Container-Images
 - Sichere Clusterkonfiguration
     - Zugriff auf die Kubernetes API kontrollieren
     - Admission Control
     - Role-Based Access Control
-    - etcd-Sicherheit (Encryption und High Availability)
-- Runtime Security
+    - etcd-Sicherheit (Verschlüsselung und High Availability)
+- Runtime-Security
 
 **Training Format:** Vor Ort (maximal 15 Teilnehmende)
 
 ## Zielpublikum
 
-DevOps, SRE, security engineers und IT teams.
+DevOps- und Platform-Teams, SREs, Security-Engineers und IT-Teams.
 
 ## Dauer
 
@@ -43,4 +43,4 @@ Teilnehmende benötigen nur einen Laptop mit direktem Zugang zum Internet. Umgan
 
 ## Ziel
 
-Die Teilnehmenden können nach diesem Kurs Anwendungen in Kubernetes-Clustern sicher und selbstständig bereitstellen und verwalten.
+Die Teilnehmenden können nach diesem Kurs Kubernetes-Workloads deutlich robuster absichern und gängige Security-Controls in der Praxis anwenden.

@@ -7,7 +7,7 @@ logo_width = "150px"
 logo_text = "Songlaa"
 navbar_fixed = false
 # OpenGraph / Twitter Card metadata
-description = "Kubernetes & Cloud Native Security-On-Site Schulungen – von Engineers, praxisorientiert und individuell anpassbar"
+description = "Kubernetes- und Cloud-Native-Security-Trainings vor Ort - von Engineers, praxisnah und auf Ihr Team zugeschnitten"
 author = "Songlaa"
 image = "images/logo.png"
 
@@ -29,27 +29,27 @@ contact = "Kontakt"
 # Hero section (German)
 [hero]
 title = "Kubernetes & Cloud Native Security On-Site Schulungen"
-subtitle = "von Engineers, praxisorientiert und individuell anpassbar"
+subtitle = "von Engineers, praxisnah und auf Ihr Team zugeschnitten"
 
 # Intro section (German - module descriptions)
 [intro]
-description = "Kubernetes kann komplex wirken, besonders wenn Sicherheit von Anfang an mitgedacht werden soll. Wir wissen das, weil wir solche Plattformen selbst täglich konzipieren, bauen und absichern. In unseren drei Trainings, Kubernetes Fundamentals, Kubernetes Security und Custom Security Training, machen wir Theorie praxisnah, zeigen reale Vorgehensweisen und setzen bewährte Best Practices gemeinsam hands-on um."
+description = "Kubernetes ist der Standard für Container, der Einstieg aber oft anspruchsvoll - vor allem, wenn Sicherheit von Anfang an mitgedacht wird. Genau hier setzen wir an: Wir planen, bauen und schützen solche Plattformen selbst im Alltag. In unseren Trainings Kubernetes Fundamentals, Kubernetes Security und Custom Security Training verbinden wir klare Grundlagen mit realen Szenarien, bewährten Methoden und vielen praktischen Labs."
 
 [[intro.item]]
 title = "Kubernetes Fundamentals"
-description = "Erlernen Sie Kubernetes von Grund auf – mit Sicherheit vom ersten Pod bis zu einem produktionsreifen Cluster, durch ansprechende praktische Übungen."
+description = "Sie lernen die Container-Technologie und Kubernetes-Konzepte und schaffen ein sicheres Fundament - vom ersten Pod bis zum produktionsreifen Cluster."
 icon = "hub"
 link = "#module-fundamentals"
 
 [[intro.item]]
-title = "Kubernetes Security"
-description = "Meistern Sie Kubernetes mit einem praxisorientierten Fokus auf Sicherheit – von Netzwerk-Richtlinien bis zum Laufzeitschutz, mit Schwerpunkt auf praktischen Labs."
+title = "Kubernetes Security & Hacking"
+description = "Sie vertiefen Kubernetes-Sicherheit in der Praxis: von Netzwerksegmentierung und Richtlinien bis zu wirksamem Laufzeitschutz."
 icon = "shield"
 link = "#module-security"
 
 [[intro.item]]
 title = "Custom Security Training"
-description = "Erhalten Sie ein vollständig massgeschneidertes Training für Cloud Native Technologies, entworfen nach Ihren Anforderungen – mit intensiven praktischen Labs."
+description = "Gemeinsam entwickeln wir ein vollständig massgeschneidertes Security-Training für Ihre Cloud-Native-Umgebung - inklusive passender Labs."
 icon = "bolt"
 link = "#module-custom"
 
@@ -67,24 +67,24 @@ google_tag_manager = ""
 [kubernetes_fundamentals]
 enable = true
 subtitle = "Sicherheit von Anfang an"
-description = "Fokus auf operatives Fundament und deklaratives Zustandsmanagement – von Anfang an sicher aufgebaut."
+description = "Umfassende Einführung in Container und Kubernetes - ein stabiles Fundament, um Kubernetes und Container sicher und effizient zu betreiben."
 duration = "2 Tage Workshop"
-audience1 = "Engineers, die neu bei Kubernetes sind und eine solide Grundlage für den Produktionsbetrieb benötigen."
-audience2 = "Entwickler, die die Infrastruktur verstehen wollen, auf der ihre Anwendungen laufen."
-outcomes = "Die Teilnehmer werden in der Lage sein, Anwendungen mit Vertrauen in Kubernetes-Clustern bereitzustellen und zu verwalten."
+audience1 = "Engineers, die in Kubernetes einsteigen und ein solides Fundament für den Produktionsbetrieb aufbauen wollen."
+audience2 = "Entwicklerinnen und Entwickler, die verstehen möchten, wie ihre Anwendungen auf der Plattform laufen."
+outcomes = "Die Teilnehmenden können Anwendungen in Kubernetes-Clustern sicher bereitstellen, betreiben und zielgerichtet weiterentwickeln."
 
 [kubernetes_security]
 enable = true
-description = "Umfassende Sicherheitshärtung vom Container bis zum Cluster-Level."
+description = "Umfassende Sicherheit vom Container bis zum Cluster. Sie lernen typische Schwachstellen in Kubernetes kennen, erleben mit CTFs konkrete Angriffsszenarien und leiten daraus wirksame Schutzmassnahmen ab - praxisnah und direkt umsetzbar."
 duration = "2-3 Tage Workshop"
-audience1 = "Sicherheitsexperten, die für die Prüfung und Absicherung von Cloud-Native-Stacks verantwortlich sind."
-audience2 = "DevOps & Platform Engineers, die Produktionsumgebungen härten."
-outcomes = "Die Teilnehmer werden Kubernetes-Sicherheitsbest Practices, Richtlinien und Kontrollen verstehen und implementieren."
+audience1 = "Security-Expertinnen und -Experten, die Cloud-Native-Stacks prüfen, absichern und weiterentwickeln."
+audience2 = "DevOps- und Platform-Engineers, die Produktionsumgebungen systematisch härten."
+outcomes = "Die Teilnehmenden können Sicherheits-Controls, Richtlinien und Best Practices in Kubernetes wirksam umsetzen."
 
 [custom_training]
-description = "Individuelle Cloud Native Security-Trainings, auf Ihre Anforderungen zugeschnitten – Theorie und praxisorientierten Hands-on-Labs"
+description = "Individuelle Cloud-Native-Security-Trainings, exakt auf Ihre Anforderungen zugeschnitten - mit Theorie und praxisnahen Hands-on-Labs."
 audience1 = "Individuelle Trainings können an die jeweilige Situation angepasst werden."
-audience2 = "Die Trainings können als Workshop ode DeepDive angelegt werden."
+audience2 = "Die Trainings lassen sich als Workshop oder als Deep Dive gestalten."
 platform_specifics_desc = "Der Fokus der Schulung ist abhängig von Ihnen und Ihrer Infrastruktur."
 advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Service Mesh Security oder HashiCorp IaC."
 
@@ -92,7 +92,7 @@ advanced_tooling_desc = "Deep Dives in spezifische Tools wie Cilium, Istio Servi
 description = "Unsere Trainings basieren auf einem Grundsatz: Wir lehren nur, was wir selbst in Produktion betreiben. Jedes Konzept ist praxiserprobt, jedes Lab ist realistisch, und jede Erkenntnis stammt aus echtem Kubernetes-Betrieb im grossen Massstab."
 
 [trainer]
-bio = "Mit über zehn Jahren Erfahrung im Kubernetes Engineering hat Gabriel Graf produktionskritische Cluster in grossem Massstab aufgebaut, gehärtet und betrieben. Als CISSP- und CKA-zertifizierter Engineer verbindet er tiefes Sicherheitswissen mit hands-on Praxis – eine Kombination, die seine Trainings bei Banken, Versicherungen, Pharma-, Tech- und Finanzunternehmen besonders wirkungsvoll macht. Gabriel lebt in Bern und träumt, wenn er nicht gerade Cluster oder Cloud-Lösungen absichert oder aufbaut, vom Meer und vom Surfen."
+bio = "Gabriel Graf baut, sichert und betreibt seit 10 Jahren produktive Cluster in unterschiedlichen Grössenordnungen. Als CISSP- und CKA-zertifizierter Engineer verbindet er Sicherheitswissen mit Hands-on-Praxis - eine Kombination, die seine Trainings unter anderem für Banken, Versicherungen, Pharma-, Tech- und Finanzunternehmen besonders wertvoll macht. Gabriel lebt mit seiner Familie in Bern und träumt, wenn er nicht gerade Cluster oder Cloud-Lösungen absichert oder aufbaut, vom Meer und fernen Ländern."
 
 # Social sites
 [[social]]
@@ -107,7 +107,7 @@ link = "https://www.linkedin.com/in/gabriel-graf-6b6446319"
 
 [contact]
 enable = true
-intro = "Bereit Ihr Cloud-Native-Sicherheit zu erweitern? Schreiben Sie uns und wir erstellen Ihnen ein individuelles Trainingsangebot."
+intro = "Bereit, Ihr Kubernetes-Wissen auf das nächste (Sicherheits-)Level zu bringen? Schreiben Sie uns - wir erstellen Ihnen ein individuelles Trainingsangebot."
 
 [contact.form]
 enable = true

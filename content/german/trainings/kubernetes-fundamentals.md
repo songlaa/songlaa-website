@@ -1,35 +1,35 @@
 ---
-title: "Kubernetes Grundlagen – Mit Sicherheit von Anfang an"
+title: "Kubernetes Grundlagen - sicher von Anfang an"
 date: 2025-10-20
 draft: false
-description: "Umfassende Kubernetes-Einführung mit integriertem Sicherheitsfokus und praxisorientierten Übungen."
+description: "Praxisnahe Kubernetes-Einführung mit Sicherheitsfokus und vielen Übungen."
 ---
 
 ## Überblick
 
-Diese Schulung vermittelt solide Kubernetes-Grundlagen mit Security-First-Ansatz:
+Diese Schulung vermittelt fundierte Kubernetes-Grundlagen mit einem klaren Security-First-Ansatz.
 
 ### Lerninhalte
 
-- Grundkonzepte (Container, Images und Kubernetes)
+- Grundkonzepte: Container, Images und Kubernetes
 - Docker-Architektur
 - Kubernetes-Architektur und Komponenten
-- Application Deployment
-- Service Layer und Service Discovery
+- Anwendungs-Deployment
+- Service-Ebene und Service Discovery
 - Storage in Kubernetes
-- Ressourcentypen (StatefulSet, DaemonSet, Job, ConfigMap)
+- Ressourcenarten (StatefulSet, DaemonSet, Job, ConfigMap)
 - Ressourcenmanagement in Kubernetes
 - Troubleshooting
 - Network Policies
 - Security Context
-- Überblick: Cloud Native Computing Landscape
+- Cloud Native Computing Landscape im Überblick
 
 
 **Training Format:** Vor Ort
 
 ## Zielpublikum
 
-DevOps, Software Developers, System Engineers
+DevOps-Engineers, Softwareentwicklerinnen und -entwickler sowie System-Engineers.
 
 ## Dauer
 
@@ -41,4 +41,4 @@ Teilnehmende benötigen nur einen Laptop mit direktem Zugang zum Internet. Umgan
 
 ## Ziel
 
-Die Teilnehmenden können nach diesem Kurs Anwendungen in Kubernetes-Clustern sicher und selbstständig bereitstellen und verwalten.
+Nach diesem Kurs können die Teilnehmenden Anwendungen in Kubernetes-Clustern sicher und selbstständig bereitstellen, betreiben und zuverlässig warten.
