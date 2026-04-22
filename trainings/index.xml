@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trainings on Songlaa Kubernetes Security Trainings</title><link>https://songlaa.com/trainings/</link><description>Recent content in Trainings on Songlaa Kubernetes Security Trainings</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://songlaa.com/trainings/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to Kubernetes, the secure way</title><link>https://songlaa.com/trainings/kubernetes-fundamentals/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://songlaa.com/trainings/kubernetes-fundamentals/</guid><description>Overview This training provides a comprehensive foundation for Kubernetes with a strong emphasis on security:
-Basic concepts (Container, Images and Kubernetes) Docker Architecture Kubernetes architecture and components Application deployment Service layer and discovery Storage in Kubernetes Resource types (StatefulSet, DaemonSet, Job, ConfigMap) Resource management in Kubernetes Troubleshooting Network Policies Security Context Overview: Cloud Native Computing Landscape Training Format: Onsite training at your location
-Audience Beginners or professionals who want to understand Kubernetes fundamentals.</description></item><item><title>Kubernetes Security</title><link>https://songlaa.com/trainings/kubernetes-security/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://songlaa.com/trainings/kubernetes-security/</guid><description>Overview Comprehensive security training covering:
-Introduction and Core Concepts Container and Kubernetes Fundamentals Container Security Image Size, Hardening, Privileges, and Security Docker Architecture Kubernetes &amp;amp; Network Security Secrets and External Operators Ingress Network Policies and Encryption Pod Security Context Cloud Native Security and Kubernetes Secure image building &amp;amp; Deployment SBOM for Container-Images Secure Cluster Configuration Controlling Access to the Kube API Admission Control Role-Based Access Control etcd Security (Encryption and High Availability) Runtime Security Training Format: Onsite training at your location</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Trainings on Songlaa Kubernetes Security Trainings</title><link>https://songlaa.com/trainings/</link><description>Recent content in Trainings on Songlaa Kubernetes Security Trainings</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://songlaa.com/trainings/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to Kubernetes, the secure way</title><link>https://songlaa.com/trainings/kubernetes-fundamentals/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://songlaa.com/trainings/kubernetes-fundamentals/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This training provides a comprehensive foundation for Kubernetes with a strong emphasis on security:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic concepts (Container, Images and Kubernetes)&lt;/li&gt;
+&lt;li&gt;Docker Architecture&lt;/li&gt;
+&lt;li&gt;Kubernetes architecture and components&lt;/li&gt;
+&lt;li&gt;Application deployment&lt;/li&gt;
+&lt;li&gt;Service layer and discovery&lt;/li&gt;
+&lt;li&gt;Storage in Kubernetes&lt;/li&gt;
+&lt;li&gt;Resource types (StatefulSet, DaemonSet, Job, ConfigMap)&lt;/li&gt;
+&lt;li&gt;Resource management in Kubernetes&lt;/li&gt;
+&lt;li&gt;Troubleshooting&lt;/li&gt;
+&lt;li&gt;Network Policies&lt;/li&gt;
+&lt;li&gt;Security Context&lt;/li&gt;
+&lt;li&gt;Overview: Cloud Native Computing Landscape&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Training Format:&lt;/strong&gt; Onsite training at your location&lt;/p&gt;
+&lt;h2 id="audience"&gt;Audience&lt;/h2&gt;
+&lt;p&gt;Beginners or professionals who want to understand Kubernetes fundamentals.&lt;/p&gt;</description></item><item><title>Kubernetes Security</title><link>https://songlaa.com/trainings/kubernetes-security/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://songlaa.com/trainings/kubernetes-security/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Comprehensive security training covering:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction and Core Concepts
+&lt;ul&gt;
+&lt;li&gt;Container and Kubernetes Fundamentals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Container Security
+&lt;ul&gt;
+&lt;li&gt;Image Size, Hardening, Privileges, and Security&lt;/li&gt;
+&lt;li&gt;Docker Architecture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kubernetes &amp;amp; Network Security
+&lt;ul&gt;
+&lt;li&gt;Secrets and External Operators&lt;/li&gt;
+&lt;li&gt;Ingress&lt;/li&gt;
+&lt;li&gt;Network Policies and Encryption&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pod Security Context&lt;/li&gt;
+&lt;li&gt;Cloud Native Security and Kubernetes
+&lt;ul&gt;
+&lt;li&gt;Secure image building &amp;amp; Deployment&lt;/li&gt;
+&lt;li&gt;SBOM for Container-Images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secure Cluster Configuration
+&lt;ul&gt;
+&lt;li&gt;Controlling Access to the Kube API&lt;/li&gt;
+&lt;li&gt;Admission Control&lt;/li&gt;
+&lt;li&gt;Role-Based Access Control&lt;/li&gt;
+&lt;li&gt;etcd Security (Encryption and High Availability)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Runtime Security&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Training Format:&lt;/strong&gt; Onsite training at your location&lt;/p&gt;</description></item></channel></rss>
