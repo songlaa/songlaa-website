@@ -1,71 +1,103 @@
+    {{ $metaTitle := .Title }}
+    {{ if and .Title (ne .Title .Site.Title) }}{{ $metaTitle = printf "%s | %s" .Title .Site.Title }}{{ end }}
+    {{ if not .Title }}{{ $metaTitle = .Site.Title }}{{ end }}
+    {{ $metaDescription := .Description | default .Site.Params.description }}
+    {{ $metaImage := .Params.image | default .Site.Params.image | absURL }}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
+    <title>{{ $metaTitle }}</title>
 
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ $metaDescription }}">
     {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
     {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+
+    {{ $xDefaultHref := "/" | absURL }}
+    {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Lang }}" href="{{ .Permalink }}" />
+    {{ if eq .Lang "en" }}{{ $xDefaultHref = .Permalink }}{{ end }}
+    {{ end }}
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="{{ $xDefaultHref }}" />
 
     <!-- OpenGraph meta tags -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:locale" content="{{ replace (.Site.LanguageCode | default "en-US") "-" "_" }}">
+    {{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+    {{ if ne .Lang $.Site.Language.Lang }}
+    <meta property="og:locale:alternate" content="{{ replace (.Language.LanguageCode | default .Lang) "-" "_" }}">
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    <meta property="og:title" content="{{ $metaTitle }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.image }}">
+    <meta property="og:image" content="{{ $metaImage }}">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $metaTitle }}">
+    <meta name="twitter:description" content="{{ $metaDescription }}">
+    <meta name="twitter:image" content="{{ $metaImage }}">
+    <meta name="twitter:url" content="{{ .Permalink }}">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "@id": "{{ .Site.BaseURL }}#organization",
-                "name": "Songlaa GmbH",
-                "url": "{{ .Site.BaseURL }}",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "{{ .Site.BaseURL }}{{ .Site.Params.image }}"
-                },
-                "description": "{{ .Site.Params.description }}",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Bern",
-                    "addressCountry": "CH"
-                },
-                "sameAs": [
-                    "https://github.com/songlaa",
-                    "https://www.linkedin.com/in/gabriel-graf-6b6446319"
-                ]
-            },
-            {
-                "@type": "Course",
-                "@id": "{{ .Site.BaseURL }}#kubernetes-fundamentals",
-                "name": "Introduction to Kubernetes, the secure way",
-                "description": "Learn the core components and architecture of Kubernetes with security-focused hands-on labs.",
-                "provider": { "@id": "{{ .Site.BaseURL }}#organization" },
-                "courseMode": "instructor-led",
-                "educationalLevel": "beginner",
-                "teaches": ["Kubernetes fundamentals", "Container security", "Pod security", "Network policies"]
-            },
-            {
-                "@type": "Course",
-                "@id": "{{ .Site.BaseURL }}#kubernetes-security",
-                "name": "Kubernetes Security",
-                "description": "Deep dive into Kubernetes security concepts and hands-on defense labs.",
-                "provider": { "@id": "{{ .Site.BaseURL }}#organization" },
-                "courseMode": "instructor-led",
-                "educationalLevel": "advanced",
-                "teaches": ["Advanced Kubernetes security", "RBAC implementation", "Security scanning", "Threat detection"]
-            }
-        ]
+      "@type": "Organization",
+      "@id": "{{ .Site.BaseURL }}#organization",
+      "name": "Songlaa GmbH",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.image | absURL }}"
+      },
+      "description": "{{ .Site.Params.description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bern",
+        "addressCountry": "CH"
+      },
+      "sameAs": [
+        "https://github.com/songlaa",
+        "https://www.linkedin.com/in/gabriel-graf-6b6446319"
+      ]
     }
     </script>
 
+    {{ if eq .Section "trainings" }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "{{ .Title }}",
+      "description": "{{ $metaDescription }}",
+      "url": "{{ .Permalink }}",
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "provider": {
+        "@type": "Organization",
+        "name": "Songlaa GmbH",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "courseMode": "instructor-led"
+    }
+    </script>
+    {{ end }}
+
     <link rel="canonical" href="{{ .Permalink }}"/>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon | relURL }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    {{ if .IsHome }}
+    <link rel="preload" as="image" href="{{ "images/slider-bg-songlaa.jpg" | absURL }}" fetchpriority="high">
+    {{ end }}
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>

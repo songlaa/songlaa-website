@@ -1,12 +1,18 @@
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+    {{ $trainerHref := "#trainer" }}
+    {{ $contactHref := "#contact" }}
+    {{ if not .IsHome }}
+    {{ $trainerHref = printf "%s#trainer" .Site.Home.Permalink }}
+    {{ $contactHref = printf "%s#contact" .Site.Home.Permalink }}
+    {{ end }}
     <div class="h-[2px] bg-gradient-to-r from-[#3f95ea] via-[#52d3aa] to-[#3f95ea]"></div>
     <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
         <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold tracking-tighter text-zinc-900 font-headline no-underline">
             {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
         </a>
         <div class="hidden md:flex gap-8 items-center">
-            <a href="#trainer" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Trainer</a>
-            <a href="#contact" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Contact</a>
+            <a href="{{ $trainerHref }}" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Trainer</a>
+            <a href="{{ $contactHref }}" class="text-sm font-medium text-zinc-600 hover:text-primary transition-colors no-underline">Contact</a>
             {{ if gt (len hugo.Sites) 1 }}
             <div class="flex items-center gap-2 text-sm font-headline tracking-tight">
                 {{ range $i, $site := hugo.Sites }}
@@ -27,8 +33,8 @@
     </div>
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-zinc-100 px-6 py-4">
-        <a href="#trainer" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Trainer</a>
-        <a href="#contact" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Contact</a>
+        <a href="{{ $trainerHref }}" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Trainer</a>
+        <a href="{{ $contactHref }}" class="block py-2 text-sm font-medium text-zinc-600 hover:text-primary no-underline">Contact</a>
         {{ if gt (len hugo.Sites) 1 }}
         <div class="flex items-center gap-2 py-2 text-sm font-headline tracking-tight">
             {{ range $i, $site := hugo.Sites }}
